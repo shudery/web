@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>unbind和die删除绑定,off取代die</title>
+<script type="text/javascript" src="../jquery.js">
+</script>
+<script type="text/javascript">
+	$(document).ready(function(e) {
+        function aClick(){
+				$("div").show().fadeOut("slow");
+		$("#bind").click(function(){
+
+				$("#theone").bind("click",aClick).text("绑定成功，单击我有反应了！");	
+			})
+		$("#unbind").click(function(){
+				$("#theone").unbind('click',aClick).text("解除绑定状态");
+			})
+    });
+</script>
+</head>
+
+<body>
+	<button id="theone">没有绑定任何状态</button>
+    <button id="bind">开始绑定单击状态</button>
+    <button id="unbind">删除绑定状态</button>
+    <div style="display:none">hello</div>
+
+</body>
+</html>

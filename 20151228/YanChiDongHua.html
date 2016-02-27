@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>延迟动画，动画的递归调用代替动画队列</title>
+    <script type="text/javascript" src="../jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("button").bind("click",taskone);
+            function taskone(){
+                $("#one").delay(300).animate({left:"+=720px"},1000,function(){
+                    $("#two").delay(300).animate({left:"+=600px"},1000,function(){
+                        $("#three").delay(300).animate({left:"+=480px"},1000,function(){
+                            $("#four").delay(300).animate({left:"+=360px"},1000,function(){
+                                $("#five").delay(300).animate({left:"+=240px"},1000,function(){
+                                    $("button").text("动画结束");
+                                })
+                            })
+                        })
+                    })
+                })
+            }
+        })
+    </script>
+    <style>
+        div{
+            border:2px solid green;
+            background:red;
+            width:118px;
+            height:118px;
+            left:0px;
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+    <button id="button">开始</button>
+<br/>
+    <div id="one">1</div>
+    <div id="two">2</div>
+    <div id="three">3</div>
+    <div id="four">4</div>
+    <div id="five">5</div>
+</body>
+</html>

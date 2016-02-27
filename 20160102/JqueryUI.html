@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>一些JQueryUI的动画效果</title>
+    <script type="text/javascript" src="../jquery.js"></script>
+    <script type="text/javascript" src="../jquery-ui.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#test").sortable();//实现自由拖拽动画
+            $("button").click(function(){//实现弹出框动画
+                $("#tankuang").dialog("open");
+            })
+            $("#tankuang").dialog({
+                modal:true,//使用设计的样式
+                autoOpen:false,//初始化之后是否要立即显示对话框
+                buttons:{
+                    "帅炸（OK）":function(){
+                        $(this).dialog('close');//这里加delay没用，因为不是动画队列?
+                    },
+                    "还好（Cancel）":function(){
+                        $(this).dialog('close');
+                        $("#tankuang2").dialog("open");//这里嵌套再弹出一个框
+                        return false;
+                    }
+                },
+                show:"blind",
+                hide:"explode"//对话框出现和退出的形式
+            });
+            $("#tankuang2").dialog({
+                modal:true,
+                autoOpen:false,
+                buttons:{
+                    "帅炸（OK）":function(){
+                        $(this).dialog('close');
+
+                    },
+                    "还好（Cancel）":function(){
+                        $(this).dialog('open');
+                        return false;
+                    }
+                },
+                show:"blind",
+                hide:"explode"
+            })
+        })
+    </script>
+    <link type="text/css" rel="stylesheet" href="../jquery-ui-1.11.4/jquery-ui.css">
+    <!--引入样式可以直接改变动画的效果，弹出框变得更加友好-->
+</head>
+<body>
+    <ul id="test">
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+        <li>列表4</li>
+        <li>列表5</li>
+    </ul>
+    <button>弹出对话框</button>
+    <div id="tankuang">
+        <p>请问达哥帅吗!</p>
+    </div>
+    <div id="tankuang2">
+        <p>再给你次机会，你再想想</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>圣杯布局</title>
+    <!--当浏览器窗口宽度小到一定程度时，左右栏开始换行滑动，初试与左右边栏距离有关，不能太近，双飞翼布局没这问题-->
+    <style type="text/css">
+        body{
+            background-color:#3300FF;
+            margin:0;
+            padding:0;
+        }
+        #top{
+            text-align:center;
+        }
+        #header{
+            background-color:firebrick;
+            padding:0 220px 0 200px;/*设置大框的内边距，然后分别设置相对位置和左右距离即可将两边拉出去*/
+            height:200px;
+        }
+        .main{
+            width:100%;
+            float:left;
+            background-color: springgreen;
+            height:200px;
+        }
+        .left{
+            width:200px;
+            float:left;
+            background-color: salmon;
+            margin-left:-100%;
+            position:relative;
+            left:-200px;
+            height:200px;
+        }
+        .right{
+            width:220px;
+            float:left;
+            background-color: greenyellow;
+            margin-left:-220px;;
+            position:relative;
+            right:-220px;
+            height:200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="page">
+        <div id="top"><h1>圣杯布局</h1></div>
+        <div id="header">
+            <div class="main">这是main</div>
+            <div class="left">这是left</div>
+            <div class="right">这是right</div>
+        </div>
+    </div>
+</body>
+</html>

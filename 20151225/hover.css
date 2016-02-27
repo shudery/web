@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+/* CSS Document */
+a.list{
+		position:relative;
+		display:block;
+		width:200px;
+		color:red;
+		line-height:30px;
+		background:#03F;
+		text-decoration:none;
+		font-size:18px;
+	}
+a.list:hover{
+		color: #30F;
+		text-decoration:none;
+		background:#F03;
+	}
+ul{
+	position:absolute;
+	left:0;
+	top:30px;
+	margin:0;
+	padding:0;
+	width:200px;
+	background: rgba(255,255,255,0.8) ;
+	display:none;
+	}
+li{
+	list-style-type:none;
+	line-height:20px;
+	font-size:12px;
+	} 
+

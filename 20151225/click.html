@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>click,mousedown,mouseup</title>
+<script src="../jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+    
+
+	$('p').click(function(){
+			alert('shudery');
+		})
+		
+	$('button').mousedown(function(){
+			$('body').css("background","red");
+		})	
+			
+	$('button').mouseup(function(){
+			$('body').css("background","white");
+		})
+		});
+</script>
+</head>
+
+<body>
+<p>test</p>
+<button>change</button>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>警示框--可关闭的警示框</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<!--alert-dismissable, alert-link, -->
+<body>
+<div class="alert alert-success alert-dismissable" role="alert">
+    <button class="close" type="button" data-dismiss="alert">&times;</button>
+    恭喜您操作成功！
+</div>
+<div class="alert alert-info alert-dismissable" role="alert">
+    <button class="close" type="button" data-dismiss="alert">&times;</button>
+    请输入正确的密码<a href="#" class="alert-link">this important alert message</a>
+</div>
+<div class="alert alert-warning alert-dismissable" role="alert">
+    <button class="close" type="button" data-dismiss="alert">&times;</button>
+    您已操作失败两次，还有最后一次机会
+</div>
+<div class="alert alert-danger alert-dismissable" role="alert">
+    <button class="close" type="button" data-dismiss="alert">&times;</button>
+    对不起，您输入的密码有误
+</div>
+<!--下面是代码部分-->
+<h2>下面是代码部区</h2>
+<div class="alert alert-info" role="alert">请修改相应信息</div>
+<div class="alert alert-success" role="alert">谢谢，操作成功！</div>
+<div class="alert alert-warning" role="alert">您已操作失败两次，还有最后一次机会</div>
+<div class="alert alert-danger" role="alert">对不起，您刚才的操作失败</div>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>

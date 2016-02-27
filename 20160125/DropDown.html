@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>下拉菜单,下拉分割线，菜单标题，对齐方式，菜单项状态</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+
+</head>
+<body>
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+        下拉菜单
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+        <li role="presentation" class="dropdown-header">第一部分菜单头部</li>
+        <li role="presentation" class="active"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+
+        <li role="presentation" class="divider"></li>
+
+        <li role="presentation" class="dropdown-header">第二部分菜单头部</li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+    </ul>
+</div>
+<script src="../jquery.js"></script>
+<script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

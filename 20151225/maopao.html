@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>事件冒泡</title>
+<script src="../jquery.js"></script>
+<script type="text/javascript">
+	function stopBubble(e){//如果提供了事件对象，那么这是一个非IE浏览器
+			if(e&&e.stopPropagation)
+				e.stopPropagation();
+				else
+				window.event.cancelBubble=true;//用IE得方式取消冒泡
+		}
+	function stopDefault(e){//阻止浏览器的默认行为
+			if(e&&e.preventDefault)
+				e.preventDefault();
+				else
+				window.event.returnValue=false;
+				return false;
+		}
+		function aclick(e){
+				alert('only');
+				stopBubble(e);
+			}
+</script>
+
+</head>
+<body onclick="alert('a');">
+<div onClick="alert('sss');">
+<div onClick="alert('b');">
+<a href="#" onClick="aclick();">tip</a></div></div>
+</body>
+</html>

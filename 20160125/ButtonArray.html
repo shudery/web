@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>按钮组</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="btn-group">
+    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-step-backward"></span></button>
+    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-fast-backward"></span></button>
+    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-backward"></span></button>
+    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-play"></span></button>
+    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pause"></span></button>
+    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-stop"></span></button>
+    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-forward "></span></button>
+    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-fast-forward"></span></button>
+    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-step-forward"></span></button>
+</div>
+<br/><br/>
+<div class="btn-group">
+    <button class="btn btn-default" type="button">首页</button>
+    <button class="btn btn-default" type="button">产品展示</button>
+    <button class="btn btn-default" type="button">案例分析</button>
+    <button class="btn btn-default" type="button">联系我们</button>
+    <div class="btn-group">
+        <!--注意这个地方要嵌套一个带类的DIV-->
+        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">关于我们<span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li><a href="##">公司简介</a></li>
+            <li><a href="##">企业文化</a></li>
+            <li><a href="##">组织结构</a></li>
+            <li><a href="##">客服服务</a></li>
+        </ul>
+    </div>
+</div>
+<script src="../jquery.js"></script>
+<script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

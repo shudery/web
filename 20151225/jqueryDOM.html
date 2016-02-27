@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>使用Jquery操作DOM，创建节点</title>
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(e) {
+        var li_1=$("<li title='hello'>shudery</li>");
+		var li_2=$("<li title='hello'>shudery</li>");//一个值不能插入两次
+		$("ul").append(li_2);//插入到UL内部后面
+  		$("ul").after(li_1);//插入到ul外部后面
+    });
+	
+</script>
+</head>
+
+<body>
+<ul><li>hi</li></ul>
+</body>
+</html>

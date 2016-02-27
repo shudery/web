@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>双飞翼布局</title>
+    <!--也可以添加position让右栏变成自适应的，让左边栏则不用position-->
+    <style type="text/css">
+
+        body{
+            background-color:#3300FF;
+            margin:0;
+            padding:0;
+        }
+        #top{
+            text-align:center;
+        }
+        #header{
+            background-color:firebrick;
+            /*padding:0 320px 0 300px;设置大框的内边距，然后分别设置相对位置和左右距离即可将两边拉出去*/
+            height:200px;
+        }
+        .main{
+            width:100%;
+            float:left;
+            background-color: springgreen;
+            height:200px;
+        }
+        .help{
+            margin:0 220px 0 200px;
+
+        }
+        .left{
+            width:200px;
+            float:left;
+            background-color: salmon;
+            margin-left:-100%;
+            /*position:relative;*/
+            /*left:-200px;*/
+            height:200px;
+        }
+        .right{
+            width:220px;
+            float:left;
+            background-color: greenyellow;
+            margin-left:-220px;;
+            /*position:relative;*/
+            /*right:-220px;*/
+            height:200px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="page">
+    <div id="top"><h1>双飞翼布局</h1></div>
+    <div id="header">
+        <div class="main">
+            <div class="help"><!--嵌套一个help解决main的位置问题-->
+                这是main
+            </div>
+        </div>
+
+        <div class="left">这是left</div>
+        <div class="right">这是right</div>
+    </div>
+</div>
+</body>
+</html>

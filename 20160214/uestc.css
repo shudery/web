@@ -1,0 +1,86 @@
+*{
+    margin:0;
+    padding:0;
+}
+.navbar{
+    margin: 0;
+    padding: 0;
+}
+#nav1 li{
+    margin-right:
+}
+#container{
+    background: forestgreen;
+}
+#header{
+    background: #3c28fa;
+    height:30px;
+    color: #ffffff;
+}
+#header p{
+    margin: 5px;
+}
+#h_left{
+    float:left;
+    margin-left:200px;
+}
+#h_right{
+    float:right;
+    margin-right:200px;
+}
+#main{
+    background: skyblue;
+    clear:left;
+    margin-left:200px;
+    width:940px;
+}
+#m_header{
+    height:100px;
+}
+#m_h_left{
+    float:left;
+}
+#m_h_right form{
+    margin:35px 35px 0 0;
+}
+#m_h_img{
+    margin:15px;
+}
+#content_p{
+    background: #8b2b1e;
+    height:300px;
+}
+#content{
+    background-color:firebrick;
+    /*padding:0 320px 0 300px;设置大框的内边距，然后分别设置相对位置和左右距离即可将两边拉出去*/
+    height:400px;
+}
+#content_mid{
+    width:100%;
+    float:left;
+    background-color: springgreen;
+    height:400px;
+}
+.help{
+    margin:0 320px 0 300px;
+
+}
+#content_left{
+    width:300px;
+    float:left;
+    background-color: salmon;
+    margin-left:-100%;
+    /*position:relative;*/
+    /*left:-200px;*/
+    height:400px;
+}
+#content_right{
+    width:320px;
+    float:left;
+    background-color: greenyellow;
+    margin-left:-320px;;
+    /*position:relative;*/
+    /*right:-220px;*/
+    height:400px;
+}
+

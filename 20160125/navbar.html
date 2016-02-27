@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+        <!--导航条（navbar）和上一节介绍的导航（nav），
+        就相差一个字，多了一个“条”字。其实在Bootstrap框架中他们还是明显的区别。
+        在导航条(navbar)中有一个背景色、而且导航条可以是纯链接（类似导航）
+        ，也可以是表单，还有就是表单和导航一起结合等多种形式。
+        在这一节中将一起探讨Bootstrap框架中导航条的使用。
+
+导航条和导航一样，在Bootstrap框架中是一个独立组件，所以你也可以根据自己的需求使用不同的版本：-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>标签形(tab)导航</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+<body>
+<!--基本导航条-->
+<div class="navbar navbar-default" role="navigation">
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="##">网站首页</a></li>
+        <li><a href="##">系列教程</a></li>
+        <li><a href="##">名师介绍</a></li>
+        <li><a href="##">成功案例</a></li>
+        <li><a href="##">关于我们</a></li>
+    </ul>
+</div>
+<div class="navbar navbar-default" role="navigation">
+    　<div class="navbar-header">
+    　    <a href="##" class="navbar-brand">慕课网</a>
+    　</div>
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="##">网站首页</a></li>
+        <li class="dropdown">
+            <a href="##" data-toggle="dropdown" class="dropdown-toggle">系列教程<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="##">CSS3</a></li>
+                <li><a href="##">JavaScript</a></li>
+                <li class="disabled"><a href="##">PHP</a></li>
+            </ul>
+        </li>
+        <li><a href="##">名师介绍</a></li>
+        <li><a href="##">成功案例</a></li>
+        <li><a href="##">关于我们</a></li>
+    </ul>
+    <form action="##" class="navbar-form navbar-left" rol="search">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="请输入关键词" />
+        </div>
+        <button type="submit" class="btn btn-default">搜索</button>
+    </form>
+</div>
+<script src="../jquery.js"></script>
+<script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

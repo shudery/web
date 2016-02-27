@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js和jq动画原理</title>
+    <!--这里使用getid.style.left样式必须绑定在元素上，不能用CSS选择器！！！-->
+
+    <script type="text/javascript" src="../jquery.js"></script>
+    <script type="text/javascript">
+        function test(){
+            var getid =document.getElementById('mydiv');
+            function donghua(){
+                getid.style.left=parseInt(getid.style.left)+1+'px';
+                if(parseInt(getid.style.left)>300)
+                clearInterval(timer);
+            }
+            var timer=setInterval(donghua,40);
+        }
+    </script>
+    <style>
+        <!--这里没用啊-->
+        #mydiv{
+            width:50px;
+            height:50px;
+            background: #8e8eff;
+            position:absolute;
+            left:50px;
+        }
+    </style>
+</head>
+<body onload="test()">
+    <div id="mydiv" style="width:50px;
+            height:50px;
+            background:red;
+            position:absolute;
+            left:50px;"></div>
+</body>
+</html>

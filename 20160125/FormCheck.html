@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单控件状态——验证状态</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+
+</head>
+<body>
+<h3>示例1</h3>
+<form role="form">
+    <div class="form-group has-success col-xs-3">
+        <label class="control-label" for="inputSuccess1">成功状态</label>
+        <input type="text" class="form-control" id="inputSuccess1" placeholder="成功状态" >
+    </div>
+    <div class="form-group has-warning col-xs-3">
+        <label class="control-label" for="inputWarning1">警告状态</label>
+        <input type="text" class="form-control" id="inputWarning1" placeholder="警告状态">
+    </div>
+    <div class="form-group has-error col-xs-3">
+        <label class="control-label" for="inputError1">错误状态</label>
+        <input type="text" class="form-control" id="inputError1" placeholder="错误状态">
+    </div>
+</form>
+<br>
+<br>
+<br>
+<h3>示例2</h3>
+<form role="form">
+    <div class="form-group has-success has-feedback col-xs-8">
+        <label class="control-label" for="inputSuccess1">成功状态</label>
+        <input type="text" class="form-control" id="inputSuccess1" placeholder="成功状态" >
+        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+    </div>
+    <div class="form-group has-warning has-feedback col-xs-8">
+        <label class="control-label" for="inputWarning1">警告状态</label>
+        <input type="text" class="form-control" id="inputWarning1" placeholder="警告状态">
+        <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+    </div>
+    <div class="form-group has-error has-feedback col-xs-8">
+        <label class="control-label" for="inputError1">错误状态</label>
+        <input type="text" class="form-control" id="inputError1" placeholder="错误状态">
+        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+    </div>
+
+</form>
+</body>
+</html>

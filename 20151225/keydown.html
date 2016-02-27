@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>键盘操作事件</title>
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript">
+	var i=0;
+  	 $(document).ready(function(e) {
+      	$('input').keydown(function(event){
+				switch (event.keyCode){
+						case 13:$('p').text(i=i+1);break;//按住按键不放会持续执行
+						//若用keyup则只会在松开按键时才触发函数
+					}//keyCode返回相应键的ASCII码，回车键的码为13
+					//如果用keypress则输入域中有默认行为的按键不会触发（tab）
+			})  
+		$('input').change(function(){alert("hi")})//change事件在焦点改变时就会触发，可以用来验证文本框输入的信息，比如密码的位数之类的
+	  	$('input').keyup(function(){$('p').text(i=0);})
+	  })
+</script>
+</head>
+<body>
+	<input type="text" class="test"/>
+    <p>0</p>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>已解决：一直不符合，用W3C在线测试可以得出正确结果，搞不懂</title>
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript">
+//从live在新版本被on替代知道原来是因为 toggle在新版本也被替代了！！
+	$(document).ready(function() {
+			/*
+					$("button").toggle(
+					function(){$("#cc").hide('slow');},
+					function(){$("#cc").show('slow');}
+					);*/
+		 var flag=1;
+    $("button").click(function(){
+        if(flag==1){
+            $(".cc").show(1111);
+			flag=0;
+        }else{
+            $(".cc").hide(1111);
+            flag=1;
+        }})//替代的方法为Click，可以添加if增加循环显示的个数
+					
+});
+</script>
+</head>
+
+<body>
+
+<ul class="nav">
+    	<button><li class="nav1" style="float:left"></button>
+        	<a href="www.baidu.com" id="test1" title="First View">Home Page</a> 
+    			<ul class="cc" style="display:none">
+    				<li><a class="nth1" href="#">1</a></li>
+    				<li><a class="nth1" href="#">2</a></li>
+                    <li><a class="nth1" href="#">2</a></li>
+   				</ul>
+        </li>
+        <li class="nav1" style="float:left">
+        	<a href="" id="test1" title="School">University</a> 
+    			<ul class="cc" style="display:none">
+    				<li><a class="nth1" href="http://bbs.uestc.edu.cn/" target="_blank">清水河畔</a></li>
+    				<li><a class="nth1" href="http://www.uestc.edu.cn/" target="_blank">官网</a></li>
+                    <li><a class="nth1" href="http://tieba.baidu.com/f?ie=utf-8&kw=%E7%94%B5%E5%AD%90%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6" target="_blank">贴吧</a></li>
+   				</ul>
+        </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>滑动，自定义动画animate,stop,delay</title>
+    <script type="text/javascript" src="../jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("div").addClass("red");
+            $("#slidedown1").click(function(){
+                $("#slidedown").fadeTo(1111,1);//slidedown,fadeOut,fadeIn
+            })
+            $("#slidetoggle").click(function(){
+                $("#slidedown").slideToggle(500);
+            })
+            $("#go").click(function(){
+                $("#block").animate({//自定义动画函数,第一个参数指定动画形式及结果样式属性对象
+                    //第三个参数为擦除方式，使用JQ内带的Linear，swing没有效果
+                    width:"90%",fontSize:"5em",borderWidth:"10px"
+                },1000)
+            })
+        })
+    </script>
+    <style>
+        .red{border:2px dashed #ff0000;}
+    </style>
+</head>
+<body>
+    <input type="submit" id="slidedown1" value="slidedown1"/>
+    <input type="submit" id="slidetoggle" value="slidetoggle"/>
+    <button id="go">run</button>
+    <div id="slidedown" style="display:none"><p>滑动动画效果</p></div>
+
+    <div id="block" style="border:1px #F00 solid">hello!</div>
+</body>
+</html>

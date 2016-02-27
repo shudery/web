@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>AJAX核心对象的创建XMLHttpRequest</title>
+    <script type="text/javascript">
+        function createobj(){
+            var xmlhttp=false;
+            try{//针对IE7之前的版本创建的XMLHttpRequest对象
+                //IE7之后的版本和其他的主流浏览器一样也支持XMLHttpRequset对象了，即使用第二种方法创建对象
+                xmlhttp=new ActiveXObject("Msxm12.XMLHTTP");
+                alert("1 "+xmlhttp);
+            }catch(e){
+                try{
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                    alert("2 "+xmlhttp);
+                }catch(e2){
+                    xmlhttp=false;
+                    alert("3 "+xmlhttp);
+                }
+            }
+            if(!xmlhttp && typeof XMLHttpRequest!='undefined'){
+                xmlhttp=new XMLHttpRequest;
+                alert("4 "+xmlhttp);
+            }
+        }
+    </script>
+</head>
+<body onload="createobj()">
+
+</body>
+</html>

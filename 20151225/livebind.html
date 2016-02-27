@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>live被on取代，注意on和bind的区别是对于绑定之后生成的同类依然有效</title>
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(e) {
+        $('body').on("click",'.clickme',function(){
+				alert("hi");
+			});
+			$('body').append('<div class="clickme">3</div>');
+    });
+</script>
+</head>
+
+<body>
+<div class="clickme">1</div>
+<div class="clickme">2</div>
+</body>
+</html>

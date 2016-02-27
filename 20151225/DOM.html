@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DOM的各种基本方法</title>
+<script type="text/javascript">
+	function start(){
+			var myDocumentElements=document.getElementsByTagName("body");
+			//获得所有的BODY元素列表
+			var myBody=myDocumentElements.item(0);
+			//取BODY元素列表的第一个，实际上也只有一个
+			var myBodymyBodyElements=myBody.getElementsByTagName("p");
+			//获得BODY中的所有P元素
+			var myP=myBodymyBody.item(1);
+			//取出P元素中的第二个
+			var myTextNode=document.createTextNode("world");
+			//获取一个创建的文本WORLD
+			myP.appendChild(myTextNode);
+			//将创建的文本赋值给P
+			myNewPTAGnode=document.createElement("p");
+			//创建一个新的元素P
+			myBody.appendChild(myNewPTAGnode);
+			//新的元素P赋给BODY 使之成为BODY的子元素
+			myP.removeChild(myTextNode);
+			//移除第二个P元素的创建文本
+			myNewPTAGnode.appendChild(myTextNode);
+			//将创建的文本赋给新的P元素
+			myNewPTAGnode.setAttribute("align","center");
+			//设置新P元素的属性和相应的值
+		}
+</script>
+</head>
+
+<body onload="start()">
+<p align="">hi</p>
+<p>hello</p>
+
+</body>
+</html>
