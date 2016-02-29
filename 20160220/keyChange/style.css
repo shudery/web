@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+}
+.box{
+    width:888px;
+    height:auto;
+    margin:0 auto;
+    margin-top:50px;
+}
+.header{
+    width:800px;
+    margin:0 auto;
+    height:30px;
+    border-bottom: 1px solid #c0c0c0;
+}
+.list-style{
+    list-style-type: none;
+    float:right;
+}
+.list-style li{
+    cursor:pointer;
+    float:left;
+    width:25px;
+    height: 20px;
+    background-image: url("testkey.png");
+}
