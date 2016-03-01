@@ -1,0 +1,44 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+
+}
+.box{
+    height:300px;
+    width:450px;
+    border:1px solid blue;
+    margin:50px auto;
+}
+.nav{
+    height:50px;
+    width:450px;
+}
+.nav ul{
+    width:450px;
+    height:50px
+}
+.nav ul li {
+    float: left;
+    padding:10px 15px 0 22px;
+    width:50px;
+    height:40px;
+
+}
+.nav a{
+}
+.content{
+    width:450px;
+    height:250px;
+    background-color:antiquewhite;
+}
+.content p{
+    width:450px;
+    word-break:break-all;
+    /*当只出现数字或者英文字母时强制换行*/
+}
+.hideb{
+    background-color: antiquewhite;
+    border-left: 1px solid blue;
+    border-right: 1px solid blue;
+}

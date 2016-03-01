@@ -9,7 +9,7 @@
     margin-top:50px;
 }
 .header{
-    width:800px;
+    width:850px;
     margin:0 auto;
     height:30px;
     border-bottom: 1px solid #c0c0c0;
@@ -17,6 +17,8 @@
 .list-style{
     list-style-type: none;
     float:right;
+    width:50px;
+    height: 20px;
 }
 .list-style li{
     cursor:pointer;
@@ -24,4 +26,24 @@
     width:25px;
     height: 20px;
     background-image: url("testkey.png");
+}
+.main{
+    width:850px;
+    margin:0 auto;
+    margin-top:20px;
+}
+.container{
+    width:250px;
+    height: 250px;
+    margin: 0 0 20px 20px;
+    float:left;
+    border:1px solid #808080;
+    list-style-type: none;
+}
+.container-2{
+    height:200px;
+    width:250px;
+    border:1px solid #808080;
+    list-style-type: none;
+    margin:20px auto;
 }
