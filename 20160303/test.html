@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CSS样式优先级</title>
+    <link rel="stylesheet" href="test.css">
+    <!--这里change元素若设置样式
+    则css的样式会被覆盖，而且媒体查询的样式覆盖也会无效！！
+    -->
+    <style>
+        .test{
+
+        }
+    </style>
+</head>
+<body>
+    <div class="test">
+    <div><div  id="change" style="height: 800px"></div>
+    </div>
+        <img src="#" style="height: 200px;width:200px;border:4px solid red">
+    <script src="../jquery.js"></script>
+<script src="test.js">
+    $(document).ready(function(){
+
+        $(window).resize(function () {          //当浏览器大小变化时
+
+            var nowlong =$(window).width();
+
+                $("#change").attr("src","../20160302/img/lin.jpg")
+
+        }
+
+    })
+</script>
+</body>
+</html>

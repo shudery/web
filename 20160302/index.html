@@ -14,7 +14,7 @@
 <div class="container" id="warp">
 
     <div class="container-fluid" id="nav2">
-        <nav class="navbar navbar-default">
+        <nav class="navbar-default">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -24,32 +24,40 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Brand</a>
+                    <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-heart"></span>&nbsp;Welcome<span class="change">&nbsp;to Shudery's blog</span> !</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
+                        <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-leaf"></span>&nbsp;Life</a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
+                                <li><a href="#">Essay</a></li>
+                                <li><a href="#">Photos</a></li>
+                                <li><a href="#">Insights</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">Sports & Music</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
+                                <li><a href="#">travel</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-fire"></span>&nbsp;Works</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Web</a></li>
+                                <li><a href="#">Serve</a></li>
+                                <li><a href="#">Internet</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">GitHub</a></li>
+                                <li><a href="#">UESTC</a></li>
                             </ul>
                         </li>
                     </ul>
-                    <form class="navbar-form navbar-right" role="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search">
-                        </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
+                    <form class="navbar-form navbar-right" id="form1" role="search">
+
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-user"></span>sign in</button>
                     </form>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -69,27 +77,27 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img src="img/Socool.jpg" alt="...">
+                    <img src="img/ren.jpg" id="img-1" alt="...">
                     <div class="carousel-caption">
-                        <h2>Firefox</h2>
+                        <h2>无人问我粥可温，无人与我共黄昏</h2>
 
-                        <p>Mozilla Firefox，中文名通常称为“火狐”或“火狐浏览器”，是一个开源网页浏览器。</p>
+                        <p></p>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="img/jiubei.jpg" alt="...">
+                    <img src="img/Socool.jpg" id="img-2" alt="...">
                     <div class="carousel-caption">
-                        <h2>Firefox</h2>
+                        <h2>越努力越有天分!</h2>
 
-                        <p>Mozilla Firefox，中文名通常称为“火狐”或“火狐浏览器”，是一个开源网页浏览器。</p>
+                        <p></p>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="img/ren.jpg" alt="...">
+                    <img src="img/Stress.jpg" id="img-3" alt="...">
                     <div class="carousel-caption">
-                        <h2>Firefox</h2>
+                        <h2>在一个流行离开的世界里，我们都不擅长告别</h2>
 
-                        <p>Mozilla Firefox，中文名通常称为“火狐”或“火狐浏览器”，是一个开源网页浏览器。</p>
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -108,13 +116,61 @@
 
     <div class="container-fluid" id="box">
         <div id="box-1" class="box-style">
-            <img src="img/lin.jpg">
+            <img src="img/3.jpg">
+            <div id="content-1">
+                <h4><a href="#">前端学什么？</a></h4>
+
+                <p>CSS不能编程？用Less、Sass、Stylus、甚至直接用 Absurd，框架除了Bootstrap还有很多。
+                    JS写多了很麻烦？jQuery。
+                    移动开发？Zepto.js。
+                    结构不好？找框架，Backbone.js是MVC，AngularJS和Ember.js是MVVM，Twitter还弄了个事件驱动框架Flight。
+                    库多了要优化加载？RequireJS。
+                    <br>代码质量成问题？Jasmine、QUnit、Mocha做单元测试。
+                    各种浏览器都要测？用Karma。
+                    测试通过了部署还有问题？持续集成，用Travis CI。
+                    用户行为也要测？用Selenium 。样式测试还有 Viff 。
+                    觉得JS都够麻烦的？用CoffeeScript。
+                    <br>
+                    想做动画？Canvas或SVG还有CSS3帮忙，干掉Flash。
+                    SVG太难画？用Snap.svg。
+                    想开发游戏？用Canvas。
+                    自己写FPS太低？用框架，CreateJS.。
+                    2D太幼稚？three.js帮你用WebGL开发3D，
+                    还不够给力？asm.js让你在浏览器中拥有虚幻3引擎。
+                </p>
+            </div>
         </div>
         <div id="box-2" class="box-style">
-            <img src="img/lin.jpg">
+            <img src="img/2.jpg">
+            <div id="content-2">
+                <h4><a href="#">Node.js与io.js那些事儿</a></h4>
+
+                <p>去年12月，多位重量级Node.js开发者不满Joyent对Node.js的管理，自立门户创建了io.js。io.js的发展速度非常快，先是于2015年1月份发布了1.0版本，并且很快就达到了2.0版本，社区非常活跃。而最近io.js社区又宣布，这两个项目将合并到Node基金会下，并暂时由“Node.js和io.js核心技术团队联合监督”运营。本文将聊一聊Node.js项目的一些历史情况，与io.js项目之间的恩怨纠葛，他们将来的发展去向。希望能从历史的层面去了解这个开源项目在运营模式上是如何演变和发展的。
+                    <br>自从JavaScript被Brendan Eich创造出来后，除了应用在浏览器中作为重要的补充外，人类从来就没有放弃过将JavaScript应用到服务端的想法。这些努力从livewired项目（1994年12月）开始，就从来没有停止过。如果你不知道livewired，那应该知道ASP中可以使用JScript语言（1996年），或者Rhino。但直到2009年，这些服务端JavaScript技术与同样应用在服务端的Java、PHP相比，显得相对失色。
+
+                    谈到Node.js的由来，不可避免要聊到它的创始人Ryan Dahl。在2009年时，服务端JavaScript迎来了它的拐点，因为Ryan Dahl带来了Node.js，在那之后Node.js将服务端JavaScript带入了新的境地，大量的JavaScript在GitHub上被贡献出来，大量的JavaScript模块出现，出现了真正的繁荣。
+
+                    Node.js不是凭空出现的项目，也不是某个Web前端工程师为了完成将JavaScript应用到服务端的理想而在实验室里捣鼓出来的。它的出现主要归功于Ryan Dahl历时多年的研究，以及一个恰到好处的节点。2008年V8随着Chrome浏览器的出世，JavaScript脚本语言的执行效率得到质的提升，这给Ryan Dahl带来新的启示，他原本的研究工作与V8之间碰撞出火花，于是带来了一个基于事件的高性能Web服务器。</p>
+            </div>
         </div>
         <div id="box-3" class="box-style">
-            <img src="img/lin.jpg">
+            <img src="img/1.jpg">
+            <div id="content-3">
+                <h4><a href="#">Michael Jordan</a></h4>
+
+                <p>迈克尔·乔丹（Michael Jordan），1963年2月17日生于纽约布鲁克林，前美国职业篮球运动员，司职得分后卫，
+                    历史上最伟大的篮球运动员。
+                    1984年的NBA选秀大会，乔丹在首轮第3顺位被芝加哥公牛队选中。
+                    1986-87赛季，乔丹场均得到37.1分，首次获得分王称号。
+                    1990-91赛季，乔丹连夺常规赛MVP和总决赛MVP称号，率领芝加哥公牛首次夺得NBA总冠军。
+                    1997-98赛季，乔丹获得个人职业生涯第10个得分王，并率领公牛队第六次夺得总冠军。
+                    2009年9月11日，乔丹正式入选NBA名人堂。<br>
+                    基于球员时代奠定的巨大影响力，乔丹在商业领域大展拳脚，他不仅拥有夏洛特黄蜂俱乐部的所有权，同时还为佳得乐、恒适等品牌代言，另外，飞人品牌的系列运动产品，至今仍在全球热销。以上种种，让乔丹拥有了11.4亿美元的身家，他也因此连续第二年进入福布斯全球富豪榜榜单。
+                    　　在这份公布出来的榜单上，乔丹的净资产排名全球第1，577位，相比去年（1，741）上升了164名。而在美国国内，他的排名是第486位。以下是来自福布斯官网更详细的介绍：
+                    　　“对夏洛特黄蜂篮球俱乐部的适时投资，让体育明星迈克尔-乔丹在 2015年进入富豪榜榜单，并且在今年继续留在榜单之内。他在2010年以1.75亿美金购入黄蜂多数股权，在2013年增持股权至90%。”
+                    　　“在2014年，得益于唐纳德-斯特林的种族歧视言论，史蒂夫-鲍尔默以破纪录的20亿美金收购快船，让NBA球队的价值迎来一次大幅上涨，乔丹所持有的黄蜂队的股权价值，也上升到了5亿美金。”
+                </p>
+            </div>
         </div>
     </div>
 
@@ -122,14 +178,14 @@
 </div>
 <footer class="container" id="footer">
     <div id="f-left">
-        <p>Desiged by shudery</p>
-        <p>@2016</p>
-        <p>125153450@qq.com</p>
+        <p><span class="glyphicon glyphicon-alert"></span><a href="#">&nbsp;<span class="change-3">版权声明</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">@2016</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <span class="change-2"><a href="#">粤ICP备16016173号</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span></span><a href="#">  Desiged@shudery</a><span class="change-2">&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#">Source-image@WaJun</a></span></p>
+
     </div>
     <div id="f-right">
-        <p>Desiged by shudery</p>
-        <p>@2016</p>
-        <p>125153450@qq.com</p>
+        <div class="ic"><img src="img/weixin-2.png">&nbsp;<a href="#" style="color: #808080">SunParker</a></div>
+        <div class="ic"><img src="img/weibo-1.png">&nbsp;<a href="#" style="color: #808080"> LinShudery</a>&nbsp;</div>
     </div>
 </footer>
 

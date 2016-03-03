@@ -1,0 +1,25 @@
+.test{
+    height: 1000px;
+
+
+}
+#change{
+    height: 500px;
+    background-image:url('../20160302/img/lin.jpg');
+}
+img{
+    height: 300px;
+    background-color:#000000;
+
+}
+@media (max-width: 800px) {
+    #change{
+        background-image: url("../20160302/img/ren.jpg");
+        height: 200px;
+    }
+    .test{
+    }
+    img{
+        background-image:url("../20160302/img/ren.jpg") ;
+    }
+}
