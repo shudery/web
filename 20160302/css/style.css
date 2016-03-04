@@ -1,6 +1,5 @@
 body{
-    background-image: url("../img/baihe.jpg");
-}
+background-image: url("../img/03034.jpg")}
 
 .touMing{
     background: rgba(255,255,255,0.1);
@@ -54,6 +53,11 @@ body{
     margin-bottom: 20px;
     font-size: 20px;
     line-height: 1.8;
+}
+.carousel-caption h2:hover{
+    cursor: pointer;
+
+    color:red;
 }
 #box{
     height:330px;
@@ -203,7 +207,6 @@ body{
 
 @media (max-width: 550px) {
     body{
-        background-image: url("../img/baihe-1.jpg");
     }
     #warp{
         width: 95%;
