@@ -9,3 +9,5 @@ img这个元素本身就有src属性引用图片，如果用background-image属�
 img和Background-image的区别
 
 一直没能解决切换图img的图片问题，PS也是渣渣得很，设计不过关。。
+
+自适应边距也应该用%，max-width有时候非常有用

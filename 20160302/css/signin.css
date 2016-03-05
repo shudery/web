@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#warp{
+    height: 550px;
+}
+#main{
+    width: 40%;
+    margin-top: 50px;
+    height: 280px;
+    border:1px solid #d3d3d3;
+    box-shadow: 5px 5px 5px;
+    border-radius: 15px;
+}
+#h-nav{
+    margin-top: 20px;
+}
+#box{
+    width:100%;
+}
+
+.input-group{
+    margin: 20px 0;
+}

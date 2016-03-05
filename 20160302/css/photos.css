@@ -1,0 +1,46 @@
+
+.carousel {
+    height: 200px;
+    margin:0 auto
+    width:100%;
+}
+
+.carousel .item {
+    height: 200px;
+    background-color: #000000;
+    width: 100%;
+}
+
+.carousel .item img {
+    width: 100%;
+}
+}
+.liuTu h2{
+    text-shadow: 0 1px 3px;
+}
+
+.carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1.8;
+}
+.carousel-caption h2:hover{
+    cursor: pointer;
+
+    color:red;
+}
+#warp{
+    height: 550px;
+}
+.liuTu{
+    border: 1px solid #c0c0c0;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px;
+    width:30%;
+    float: left;
+    margin: 20px 1%;
+}
+.liuTu a{
+    color: #358388;
+    font-size: 36px;
+}
