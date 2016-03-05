@@ -48,6 +48,9 @@ background-image: url("../img/03034.jpg")}
 .carousel-caption {
     z-index: 10;
 }
+#liuTu h2{
+    text-shadow: 0 1px 3px;
+}
 
 .carousel-caption p {
     margin-bottom: 20px;
@@ -70,7 +73,7 @@ background-image: url("../img/03034.jpg")}
 #img-1{background-image: url(../img/ren.jpg)}
 #img-2{background-image: url(../img/Socool.jpg)}
 #img-3{background-image: url(../img/Stress.jpg)}
-#box-1 img{height: 210px;width: 50%;margin: 25px 10px 10px 10px}
+#box-1 img{height: 210px;width: 50%;margin: 25px 5% 10px 5%}
 #box-2 img{height: 150px;width: 80%;margin:10px 10%}
 #box-3 img{height: 150px;width: 80%;margin:10px 10%}
 #content-1{
@@ -185,23 +188,22 @@ background-image: url("../img/03034.jpg")}
     #img-1{background-image: url(../img/ren.jpg)}
     #img-2{background-image: url(../img/Socool.jpg)}
     #img-3{background-image: url(../img/Stress.jpg)}
-    #box-1 img{height: 230px;width: 40%;margin: 30px 0px 30px 30px}
-    #box-2 img{height: 230px;width: 40%;margin: 30px 30px 30px 10px;float: right}
-    #box-3 img{height: 230px;width: 40%;margin: 30px 0px 30px 30px}
+    #box-1 img{height: 230px;width: 40%;margin: 30px 0px 30px 5%}
+    #box-2 img{height: 230px;width: 40%;margin: 30px 5% 30px 1%;float: right}
+    #box-3 img{height: 230px;width: 40%;margin: 30px 0px 30px 5%}
     #content-1{
         height:230px;width:48%;
-        float: right;overflow:hidden;
-        margin: 20px 10px 20px 0;
+        float: right;
+        margin: 3%;
     }
     #content-2{
         height:230px;width:48%;
-        overflow:hidden;
-        margin: 20px 20px 20px 20px;
+        margin: 3%;
     }
     #content-3{
         height:230px;width:48%;
-        float: right;overflow:hidden;
-        margin: 20px 10px 20px 0;
+        float: right;
+        margin: 3%;
     }
 }
 
@@ -253,23 +255,19 @@ background-image: url("../img/03034.jpg")}
         font-size: 10px;
         line-height: 1.2;
     }
-    #box-1 img{height: 120px;width: 40%;margin: 40px 0px 40px 10px;}
-    #box-2 img{height: 140px;width: 40%;margin: 30px 10px 30px 0px;}
-    #box-3 img{height: 140px;width: 40%;margin: 30px 0px 30px 10px;}
+    #box-1 img{height: 120px;width: 40%;margin: 18% 3%;}
+    #box-2 img{height: 140px;width: 40%;margin: 13% 3%;}
+    #box-3 img{height: 140px;width: 40%;margin: 13% 3%;}
     #content-1{
-        height:190px;width:47%;
-        float: right;overflow:hidden;
-        margin: 0px 5px 0 0px;
+        height:180px;
+        float: right;
     }
     #content-2{
-        height:190px;width:47%;
-        overflow:hidden;
-        margin: 0px -5px 0 10px;
+        height:180px;
     }
     #content-3{
-        height:190px;width:47%;
-        float: right;overflow:hidden;
-        margin: 0px 5px 0 -5px;
+        height:180px;
+        float: right;
     }
 
     #footer{
