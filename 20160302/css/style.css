@@ -193,16 +193,16 @@ background-image: url("../img/03034.jpg")}
     #box-2 img{height: 230px;width: 40%;margin: 30px 5% 30px 1%;float: right}
     #box-3 img{height: 230px;width: 40%;margin: 30px 0px 30px 5%}
     #content-1{
-        height:230px;width:48%;
+        height:230px;width:46%;
         float: right;
         margin: 3%;
     }
     #content-2{
-        height:230px;width:48%;
+        height:230px;width:46%;
         margin: 3%;
     }
     #content-3{
-        height:230px;width:48%;
+        height:230px;width:46%;
         float: right;
         margin: 3%;
     }
@@ -256,9 +256,9 @@ background-image: url("../img/03034.jpg")}
         font-size: 10px;
         line-height: 1.2;
     }
-    #box-1 img{height: 120px;width: 40%;margin: 18% 3%;}
-    #box-2 img{height: 140px;width: 40%;margin: 13% 3%;}
-    #box-3 img{height: 140px;width: 40%;margin: 13% 3%;}
+    #box-1 img{height: 120px;width: 40%;margin: 10% 2%;}
+    #box-2 img{height: 140px;width: 40%;margin: 10% 2%;}
+    #box-3 img{height: 140px;width: 40%;margin: 10% 2%;}
     #content-1{
         height:180px;
         float: right;
