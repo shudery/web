@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>计时器</title>
+</head>
+<script type="text/javascript">
+
+    var num=5;
+    function numCount(){
+        document.getElementById('count').value=num;
+        num=num-1;
+        setTimeout("numCount()",1000);
+    }
+</script>
+</head>
+<body onload=numCount()>
+<form>
+    <input type="text" id="count" />
+</form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>无标题文档</title>
+</head>
+
+<body>
+<div id="content">
+ <p>1</p>
+ <p>2</p>
+ <p>3</p>
+ <p>4</p>
+ <p>5</p>
+</div>
+
+<script type="text/javascript">
+    function clearText() {
+        var content=document.getElementById("content");
+        // 在此完成该函数
+    for(i=1;i<6;i++){//这里要从1开始遍历！！！！第一个是空白节点，删除后原本第一个P节点会变成childNodes[0]
+        //而i已经变为1了，这样就删除不了！！
+            var x=content.removeChild(content.childNodes[i]);
+             x=null;//删除节点后虽然节点已经不在DOM树了，但仍存在于内存中，赋值null完全删除
+            }
+
+    }
+</script>
+
+<button onclick="clearText()">清除节点内容</button>
+
+
+
+</body>
+</html>

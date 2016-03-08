@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>浏览器对象</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gkb"/>
+</head>
+<body onload="setInertval()">
+<!--先编写好网页布局-->
+<button id="btn" onclick="clearInterval(i)">stop</button>
+<input id="time" value="5">
+
+
+
+<script type="text/javascript">
+
+
+    var i =setInterval(count,1000);
+    var num=5;
+    function count(){
+        document.getElementById('time').value=num;
+        num=num-1;
+        if(num==0){
+            window.open("www.baidu.com");
+            clearInterval(i);
+        }
+    }
+
+    //获取显示秒数的元素，通过定时器来更改秒数。
+
+    //通过window的location和history对象来控制网页的跳转。
+
+</script>
+</body>
+</html>

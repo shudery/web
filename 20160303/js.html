@@ -2,14 +2,19 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title> 加载事件 </title>
+    <title>计时器</title>
     <script type="text/javascript">
-
-        function message(){
-            alert("加载中，请稍等…"); }
+        function clock(){
+            var time=new Date();
+            document.getElementById("clock").value = time;
+        }
+        var i = setInterval(clock,100);
     </script>
 </head>
-<body onload="message()">
-欢迎学习JavaScri pt。
+<body>
+<form>
+    <input type="text" id="clock" size="50"  />
+    <input type="button" value="Stop" onclick="clearInterval(i)"  />
+</form>
 </body>
 </html>

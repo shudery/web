@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>无标题文档</title>
+</head>
+<body>
+<div>
+    <ul>
+        <li>1</li><li>2</li>
+        <!--这里的li标签如果写成两行那么就有5个子节点-3个是空白节点
+            如果是一行则有4个子节点，在IE浏览器中则没有空白节点
+        -->
+    </ul>
+</div>
+<script type="text/javascript">
+    var x = document.getElementsByTagName("ul")[0].childNodes;
+//    TagName返回的是数组，所以尽管只有一个元素还是要用[0].childNodes
+    document.write("<br>"+x.length+"<br>"+x[0].nodeType)
+
+
+</script>
+</body>
+</html>
