@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DOM树向后插入兄弟节点</title>
+</head>
+<body>
+    <script>
+        function insertAfter(newNode,tarNode){
+            var parent = tarNode.parentNode;
+            if(parent.lastChild === tarNode){
+                parent.appendChild(newNode);
+            }else{
+                tarNode.nextSibling.insertBefore(newNode,tarNode.nextSibling);
+            }
+        }
+    </script>
+</body>
+</html>

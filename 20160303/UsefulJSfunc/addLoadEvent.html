@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>多个JS函数绑定window.onload</title>
+</head>
+<body>
+    <script>
+        function addLoadEvent(func){
+            var oldonload = window.onload;
+            if(typeof oldonload != 'function'){
+                window.onload = func;
+            }else{
+                window.onload = function(){
+                    oldonload();
+                    func();
+                }
+            }
+        }
+    </script>
+</body>
+</html>

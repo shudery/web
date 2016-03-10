@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Ajax基本操作</title>
+</head>
+<body>
+    <script>
+        function getNewContent(){
+            var request = new XMLHttpRequest();
+            if(request){
+                request.open("GET","file.txt",true);
+                request.onreadystatechange = function(){
+                    if(request.readyState == 4){
+                        var par = document.createElement("p");
+                        var txt = document.createTextNode(request.responseText);
+                        par.appendChild(txt);
+                        document.getElementById('what').appendChild(par);
+                    }
+                };
+            }
+        }
+    </script>
+</body>
+</html>
