@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    #div{
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        position: absolute;
+    }
+    /*DOM只能读取到写在标签里的属性！！！！！！！*/
+</style>
+<body>
+<div id="div" style="width: 20px;height: 20px;background-color: red;position:absolute;  ">
+    sdf<p id="p">ss</p>
+</div>
+    <script>
+        window.onload = demo("div");
+
+        function demo(a){
+            var test = document.getElementById(a);
+
+              alert(test.nodeName);
+            var w = parseInt(test.style.width);
+        }
+    </script>
+</body>
+</html>

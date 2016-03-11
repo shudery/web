@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    #test{
+        width: 20px;
+        height: 20px;
+ }
+</style>
+<body>
+<div id="test" style="width: 20px;height: 20px;background-color: red;position:absolute;left: 100px;top: 100px;" >
+    <!--/*DOM只能读取到写在标签里的属性！！！！！！！*/-->
+</div>
+</body>
+<script>
+    window.onload = moveElement("test",555,555,100);
+    function moveElement(elementID,x,y,t){
+        if(!document.getElementById)return false;
+        if(!document.getElementById(elementID))return false;
+        var elem = document.getElementById(elementID);
+        if(elem.movement){
+            clearTimeout(elem.movement);
+    //清除动画队列，防止鼠标快速滑动时卡顿
+        }
+        var xpos = parseInt(elem.style.left);
+        var ypos = parseInt(elem.style.top);
+    //top的值带px,parseint可以去掉px，设置top值时有些需要加px
+        if(xpos == x && ypos == y)return true;
+        if(xpos < 500)xpos++;
+        if(xpos > 500)xpos--;
+        if(ypos < 500)ypos++;
+        if(ypos > 500)ypos--;
+        elem.style.left = xpos +"px";
+        elem.style.top = ypos +"px";
+        elem.movement = setTimeout("moveElement('"+elementID+"',"+x+","+y+","+t+")",t);
+    //这里的字符串连接，去掉所有双引号和+号！
+    }
+</script>
+</html>
