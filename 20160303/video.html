@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #myvid{
+            width:800px;
+            height: 500px;
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="warp">
+        <video id="myvid" controls="controls">
+            <source src="../video/1.mp4">
+        </video>
+    </div>
+<script>
+    function createvideoControls(){
+        var vids = document.getElementsByTagName('video');
+        for(var i = 0;i<vids.length;i++){
+            addControls(vids[i]);
+        }
+    }
+    function addControls(vid){
+        vid.removeAttribute('controls');
+        vid.height = vid.videoHeight;
+        vid.width = vid.videoWidth;
+        vid.parentNode.style.height = vid.height+'px';
+        vid.parentNode.style.width = vid.width+'px';
+        var controls = document.createElement('button');
+        play.setAttribute('title','play');
+        play.innerHTML = '&#x25BA;';
+
+        controls.appendChild(play);
+        vid.parentNode.insertBefore(controls,vid);
+
+        play.onclick = function(){
+            if(vid.ended){
+                vid.currentTime = 0;
+            }
+            if(vid.paused){
+                vid.play();
+            }
+            else{
+                vid.pause();
+            }
+        };
+        vid.addEventListener('play',function(){
+            play.innerHTML = '&#x2590;&#x2590;';
+            play.setAttribute('pause',true);
+        })
+        vid.addEventListener('pause',function(){
+            play.removeAttribute('paused');
+            play.innerHTML = '&#x25BA;';
+        })
+        vid.addEventListener('ended', function () {
+            vid.pause();
+        })
+    }
+    window.onload = function(){
+        createvideoControls();
+    }
+</script>
+</body>
+</html>

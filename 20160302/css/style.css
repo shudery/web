@@ -1,6 +1,9 @@
 
 body{
-background-image: url("../img/03034.jpg")}
+background-image: url("../img/03034.jpg");
+background-attachment: fixed;
+    /*使背景图不会随着滚动条移动而移动*/
+}
 
 .touMing{
     background: rgba(255,255,255,0.1);

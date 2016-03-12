@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        //通过重写浏览器的 alert 让它可以记录弹窗的次数。
+        (function() {
+            var oldAlert = window.alert,
+                    count = 0;
+            window.alert = function(a) {
+                count++;
+                oldAlert(a + "\n You've called alert " + count + " times now. Stop, it's evil!");
+            };
+        })();
+        alert("Hello World");
+
+    </script>
+</body>
+</html>

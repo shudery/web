@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        .b{height: 200px;background-color: blue}
+        .a{height: 200px;border:10px solid red}
+    </style>
+</head>
+<body>
+<div id="test" class="b"></div>
+    <script>
+        function addClass(elementID,newclass) {
+
+            var b=document.getElementById(elementID);
+            if(!b.className){
+                b.className = newclass;
+            }else{
+                var a = b.className + ' ';
+                a = a +newclass;
+                b.className = a;
+            }
+        }
+        window.onload = function () {
+
+             addClass("test","a");
+
+        }
+    </script>
+</body>
+</html>
