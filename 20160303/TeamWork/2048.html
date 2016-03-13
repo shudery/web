@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #wrap{
+            margin: 20px auto;
+            width: 530px;
+            height: 530px;
+            border: 1px solid #808080;
+            background-color: #808080;
+        }
+        .box{
+            float: left;
+            margin: 5px;
+            border: 1px solid #000000;
+            height: 120px;
+            width: 120px;
+            background-color: #ffffff;
+            box-shadow: 5px 5px 3px;
+        }
+        .num{
+            text-align: center;
+            margin: 40px 30px;
+            background-color: red;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        #btn{
+            height: 100px;
+            float: right;
+            position: absolute;
+            right: 200px;
+            top: 400px;
+            border-radius: 20px;
+        }
+    </style>
+    <script src="../../jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            init();
+            $("#btn").click(function(){
+                init();
+            });
+            function init(){
+                var s = Math.round(Math.random()*4);
+                switch(s){
+                    case 1:init1();break;
+                    case 2:init2();break;
+                    case 3:init3();break;
+                    default :init4();
+                }
+                function init1(){
+                    $(".box p").html("");
+                    $("#box-0 p").html("4");
+                    $("#box-1 p").html("2");
+                    $("#box-4 p").html("2");
+                }
+                function init2(){
+                    $(".box p").html("");
+                    $("#box-3 p").html("4");
+                    $("#box-2 p").html("2");
+                    $("#box-7 p").html("2");
+                }
+                function init3(){
+                    $(".box p").html("");
+                    $("#box-12 p").html("4");
+                    $("#box-13 p").html("2");
+                    $("#box-8 p").html("2");
+                }
+                function init4(){
+                    $(".box p").html("");
+                    $("#box-15 p").html("4");
+                    $("#box-14 p").html("2");
+                    $("#box-11 p").html("2");
+                }
+            }
+
+            document.onkeydown =function(event){//e.keycode 37 38 39 40 左上右下
+                var e = event || window.event || arguments.callee.caller.arguments[0];
+                 switch (e.keyCode){
+                     case 37:onleft();break;
+                     case 38:ontop();break;
+                     case 39:onright();break;
+                     default :onbot();
+                 }
+
+                function onleft(){
+                    for(var i=0;i<4;i++) {
+                        for (var n = 0; n < 4; n = n + 1) {
+                            var t = [0];
+                            var a = "#num-" + n + 4*i;
+                            var c = [];
+                            c[n] = $(a).html();
+
+                        }
+                        paixuleft(c, i);
+                        xiaochuleft(c, i);
+                        paixuleft(c, i)
+                    }
+                    function paixuleft (c,i){
+                        for(var n=0;n<3;n++){
+                            if((c[n] ==='' && c[n+1] !=='') || c[n]<c[n+1]){
+                                var a = "#num-" + n + 4*i;
+                                var c =  n+1;
+                                var b = "#num-" + c + 4*i;
+                                var temp = c[n+1];
+                                $(a).html(temp);
+                                $(b).html('');
+                            }
+                        }
+                    }
+                    function xiaochuleft(c,i){
+                        for(var n=0;n<3;n++){
+                            if(c[n]===c[n+1]){
+                                var a = "#num-" + n + 4*i;
+                                var c =  n+1;
+                                var b = "#num-" + c + 4*i;
+                                var t = c[n+1]*2;
+                                $(a).html(t);
+                                $(b).html('');
+                            }
+                        }
+                    }
+
+
+                }
+                function onright(){
+                    for(var i=0;i<4;i++) {
+                        for (var n = 0; n < 4; n = n + 1) {
+                            var t = [0];
+                            var a = "#num-" + n + 4*i;
+                            var c = [];
+                            c[n] = $(a).html();
+
+                        }
+                        paixuright(c, i);
+                        xiaochuright(c, i);
+                        paixuright(c, i)
+                    }
+                    function paixuright (c,i){
+                        for(var n=0;n<3;n++){
+                            if((c[n] !=='' && c[n+1] ==='') || c[n]>c[n+1]){
+                                var a = "#num-" + n + 4*i;
+                                var c =  n+1;
+                                var b = "#num-" + c + 4*i;
+                                var temp = c[n];
+                                $(b).html(temp);
+                                $(a).html('');
+                            }
+                        }
+                    }
+                    function xiaochuright(c,i){
+                        for(var n=0;n<3;n++){
+                            if(c[n]===c[n+1]){
+                                var a = "#num-" + n + 4*i;
+                                var c =  n+1;
+                                var b = "#num-" + c + 4*i;
+                                var t = c[n+1]*2;
+                                $(b).html(t);
+                                $(a).html('');
+                            }
+                        }
+                    }
+                }
+                function ontop(){
+                    for(var i=0;i<4;i++) {
+                        for (var n = 0; n < 4; n = n + 4) {
+                            var t = [0];
+                            var a = "#num-" + n + 1*i;
+                            var c = [];
+                            c[n] = $(a).html();
+
+                        }
+                        paixutop(c, i);
+                        xiaochutop(c, i);
+                        paixutop(c, i)
+                    }
+                    function paixutop (c,i){
+                        for(var n=0;n<3;n++){
+                            if((c[n] ==='' && c[n+1] !=='') || c[n]<c[n+1]){
+                                var a = "#num-" + n + 1*i;
+                                var c =  n+4;
+                                var b = "#num-" + c + 1*i;
+                                var temp = c[n+1];
+                                $(a).html(temp);
+                                $(b).html('');
+                            }
+                        }
+                    }
+                    function xiaochutop(c,i){
+                        for(var n=0;n<3;n++){
+                            if(c[n]===c[n+1]){
+                                var a = "#num-" + n + 1*i;
+                                var c =  n+4;
+                                var b = "#num-" + c + 1*i;
+                                var t = c[n+1]*2;
+                                $(a).html(t);
+                                $(b).html('');
+                            }
+                        }
+                    }
+
+
+
+                }
+                function onbot(){
+                    for(var i=0;i<4;i++) {
+                        for (var n = 0; n < 4; n = n + 4) {
+                            var t = [0];
+                            var a = "#num-" + n + 1*i;
+                            var c = [];
+                            c[n] = $(a).html();
+
+                        }
+                        paixubot(c, i);
+                        xiaochubot(c, i);
+                        paixubot(c, i)
+                    }
+                    function paixubot (c,i){
+                        for(var n=0;n<3;n++){
+                            if((c[n] !=='' && c[n+1] ==='') || c[n]>c[n+1]){
+                                var a = "#num-" + n + 1*i;
+                                var c =  n+4;
+                                var b = "#num-" + c + 1*i;
+                                var temp = c[n];
+                                $(b).html(temp);
+                                $(a).html('');
+                            }
+                        }
+                    }
+                    function xiaochubot(c,i){
+                        for(var n=0;n<3;n++){
+                            if(c[n]===c[n+1]){
+                                var a = "#num-" + n + 1*i;
+                                var c =  n+4;
+                                var b = "#num-" + c + 1*i;
+                                var t = c[n+1]*2;
+                                $(b).html(t);
+                                $(a).html('');
+                            }
+                        }
+                    }
+                }
+
+            };
+
+        });
+    </script>
+</head>
+<body>
+<button id="btn">ONE More Time!</button>
+    <div id="wrap">
+        <div class="box" id="box-0"><p class="num" id="num-0">1asd</p></div>
+        <div class="box" id="box-1"><p class="num" id="num-1">2</p></div>
+        <div class="box" id="box-2"><p class="num" id="num-2">2</p></div>
+        <div class="box" id="box-3"><p class="num" id="num-3">3</p></div>
+
+        <div class="box" id="box-4"><p class="num" id="num-4">5</p></div>
+        <div class="box" id="box-5"><p class="num" id="num-5"></p></div>
+        <div class="box" id="box-6"><p class="num" id="num-6"></p></div>
+        <div class="box" id="box-7"><p class="num" id="num-7"></p></div>
+
+        <div class="box" id="box-8"><p class="num" id="num-8"></p></div>
+        <div class="box" id="box-9"><p class="num" id="num-9"></p></div>
+        <div class="box" id="box-10"><p class="num" id="num-10"></p></div>
+        <div class="box" id="box-11"><p class="num" id="num-11"></p></div>
+
+        <div class="box" id="box-12"><p class="num" id="num-12"></p></div>
+        <div class="box" id="box-13"><p class="num" id="num-13"></p></div>
+        <div class="box" id="box-14"><p class="num" id="num-14"></p></div>
+        <div class="box" id="box-15"><p class="num" id="num-15"></p></div>
+    </div>
+</body>
+</html>

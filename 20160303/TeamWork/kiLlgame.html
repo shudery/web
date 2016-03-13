@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #wrap{
+            width: 800px;
+            margin:50px auto;
+            border: 1px solid #000000;
+            height: 800px;
+        }
+        #num{
+            margin: 10px;
+            width: 200px;
+            height: 20px;
+            box-shadow: 5px 5px 5px;
+        }
+        .demo{
+            float: left;
+            width: 20%;
+            height: 200px;
+            border: 1px solid salmon;
+            background-color: #000000;
+        }
+        .demo:hover{
+            text-align: center;
+            background-color: #ffffff;
+        }
+        .chou{
+            float: left;
+            width: 20%;
+            height: 200px;
+            border: 1px solid salmon;
+            background-color: #ffffff;
+            color:#ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <input type="test" id="num" placeholder="输入游戏人数"><button id="btn">确定</button>
+        <button id="chou">抽取</button>
+        <div id="cont">
+
+        </div>
+    </div>
+<script>
+           window.onload =kiLlgame();
+           function kiLlgame(){
+                var a = document.getElementById("btn");
+               a.onclick = function () {
+                   var b = document.getElementById("num");
+                   var numb = b.value;
+                   gameDemo(numb);
+               }
+
+
+           }
+            function gameDemo(num){
+                var par = document.getElementById("cont");
+                if(num<9){
+                    count =0;
+                    for(var i=0;i<num;i++) {
+                        var div = document.createElement("div");
+                        var c = choose(num);
+                        var con = document.createTextNode(i+c);
+                        div.appendChild(con);
+                        par.appendChild(div);
+                        div.className = "demo";
+
+                    }
+                }
+            }
+    function choose(num){
+        var d = Math.round(2*Math.random());
+
+        if(d==1){
+            count++;
+            if(count>(num/2-1))return("平民")
+            return("狼人")
+        }else{
+            return("平民")
+        }
+    }
+</script>
+</body>
+</html>

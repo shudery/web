@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #wrap{
+            margin: 20px auto;
+            width: 530px;
+            height: 530px;
+            border: 1px solid #808080;
+            background-color: #808080;
+        }
+        .box{
+            float: left;
+            margin: 5px;
+            border: 1px solid #000000;
+            height: 120px;
+            width: 120px;
+            background-color: #ffffff;
+            box-shadow: 5px 5px 3px;
+        }
+        .num{
+            text-align: center;
+            margin: 40px 30px;
+            background-color: red;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        #btn{
+            height: 100px;
+            float: right;
+            position: absolute;
+            right: 200px;
+            top: 400px;
+            border-radius: 20px;
+        }
+    </style>
+    <script src="../../jquery.js"></script>
+    <script>
+       $(document).ready(function(){
+           var n =1
+           var b = "ss"+n+"Ssaa"
+           alert(b)
+           var a = [];
+           a[0] = $("#num-1").html();
+           a[1]=$("#num-2").html();
+           alert(a[1])
+           test(a);
+           function test(aa){
+               alert(aa.length);
+           }
+       })
+    </script>
+</head>
+<body>
+<button id="btn">ONE More Time!</button>
+<div id="wrap">
+    <div class="box" id="box-1"><p class="num" id="num-1">1</p></div>
+    <div class="box" id="box-2"><p class="num" id="num-2">2</p></div>
+    <div class="box" id="box-3"><p class="num" id="num-3">3</p></div>
+    <div class="box" id="box-4"><p class="num" id="num-4">4</p></div>
+
+    <div class="box" id="box-5"><p class="num" id="num-5">5</p></div>
+    <div class="box" id="box-6"><p class="num" id="num-6"></p></div>
+    <div class="box" id="box-7"><p class="num" id="num-7"></p></div>
+    <div class="box" id="box-8"><p class="num" id="num-8"></p></div>
+
+    <div class="box" id="box-9"><p class="num" id="num-9"></p></div>
+    <div class="box" id="box-10"><p class="num" id="num-10"></p></div>
+    <div class="box" id="box-11"><p class="num" id="num-11"></p></div>
+    <div class="box" id="box-12"><p class="num" id="num-12"></p></div>
+
+    <div class="box" id="box-13"><p class="num" id="num-13"></p></div>
+    <div class="box" id="box-14"><p class="num" id="num-14"></p></div>
+    <div class="box" id="box-15"><p class="num" id="num-15"></p></div>
+    <div class="box" id="box-16"><p class="num" id="num-16"></p></div>
+</div>
+</body>
+</html>
