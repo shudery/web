@@ -23,6 +23,7 @@
     margin-bottom: 20px;
     font-size: 20px;
     line-height: 1.8;
+    font-weight: bold;
 }
 .carousel-caption h2:hover{
     cursor: pointer;
@@ -41,6 +42,13 @@
     margin: 20px 1%;
 }
 .liuTu a{
-    color: #358388;
+    color: #110818;
+    text-shadow: 0 2px 2px;
     font-size: 36px;
+}
+.liuTu a:hover{
+    color: #ec0811;
+    text-shadow: 0 2px 2px;
+    font-size: 46px;
+    text-decoration: none;
 }

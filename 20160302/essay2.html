@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--在移动端禁用了缩放，使页面看上去更像是原生的-->
+    <title>Shudery's blog</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/2.ico" media="screen" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/essay.css" rel="stylesheet">
+</head>
+<body>
+<div class="container" id="warp">
+
+    <div class="container-fluid" id="nav2">
+        <nav class="navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-heart"></span>&nbsp;Welcome<span class="change">&nbsp;to Shudery's blog</span> !</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
+                        <li class="dropdown active">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-leaf"></span>&nbsp;Life</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="AllEssay.html">Essay</a></li>
+                                <li><a href="photos.html">Photos</a></li>
+                                <li><a target="_blank" href="#">Insights</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a target="_blank" href="#">Sports & Music</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a target="_blank" href="#">travel</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-fire"></span>&nbsp;Works</a>
+                            <ul class="dropdown-menu">
+                                <li><a target="_blank" href="#">Web</a></li>
+                                <li><a target="_blank" href="#">Serve</a></li>
+                                <li><a target="_blank" href="#">Internet</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a target="_blank" href="https://github.com/shudery">GitHub</a></li>
+                                <li><a target="_blank" href="http://www.uestc.edu.cn/">UESTC</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-right" id="form1" role="search">
+
+                        <a href="signin.html"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-user"></span>&nbsp;sign in</button></a>
+                    </form>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+    </div>
+    <div class="container-fluid" id="box">
+        <div id="box-1" class="box-style">
+            <img src="img/1.jpg">
+            <div id="content-1">
+                <h4><a target="_blank" href="#">JavaScript 就要统治世界了？</a></h4>
+
+<textarea disabled>
+0x00. 前言
+　　早上起床惯例刷刷微博，突然看到 React
+Native 宣布支持 Android 的消息，一时感觉 Facebook 太给力了，不仅没有推迟发布 React
+Native For Android 而且还比之前公告的时间提前了一些。立马下床打开电脑赶紧上官网，心想着用 JS写原生安卓的日子终于要来了。乐乐呵呵地打开文档，然后瞬间就傻眼了。好吧，尽欺负我们这些买不起 Mac 的穷学生。
+
+　　虽然暂且还是用不了 React Native，但是突然就感觉到了 JS的强大，细细一想，还真是暗暗作喜，这么恶劣的语言也居然能做出这么多有趣的事情，也真是苦了那些 JS 工程师啊。于是有了这篇稍稍对JavaScript畅想的文章。第一次写这类文章，还只是一名在校学生，固然没有大神们的那种境界，有错误和不妥之处还请指出，我定虚心学习。
+　0x01. 浏览器中的 JavaScript
+　　曾经很单纯地认为能够熟练地使用 jQuery/JavaScript 操作 DOM，能够将一些高复用的组件注册为插件就是掌握JS的标志。然而随着自己接触更多的人，接触更多的技术才发现自己的无知和渺小，浏览器其实只是 JavaScript 的一个宿主环境，提供JavaScript引擎来解释JavaScript，浏览器环境下的 JavaScript 和 JavaScript 本身还是有很大区别的，浏览器下的 JavaScript 在JavaScript 整个体系中其实也只是很小（但很重要）的一部分而已。
+
+　0x02. JavaScript 能做什么
+　　1. Web 前端
+很早以前各大公司对于 Web 标准的恶战让 JS 的环境异常恶劣，加之语言其本身的不成熟让其功能仅限于一些简单的前端交互。Ajax 技术的出现让前端可以在不刷新页面的情况下和后端进行数据交换，jQuery/zepto 等库的盛行让 JS 变得异常简单，Bootstrap/Amaze UI 等 UI 框架更是让前端的成本无限降低，RequireJS/SeaJs 让JavaScript也可以进行依赖管理，MVVM（Model-View-ViewModel
+的出现让前后端的分离做到了极致，JavaScript 在前端领域前景明朗。
+
+Ajax：掌握Ajax - IBMdeveloperWorks
+库：jQuery/zepto
+UI 框架：Bootstrap/AmazeUI
+依赖管理：RequireJS/SeaJs
+MVVM：AngularJS/Avalon
+　　2. 后端之旅
+　　2009年5月，Ryan Dah 发布了 Node 的最初版本。Node 是一个基于 Chrome JavaScript 运行时建立的平台，它对 Google V8 引擎进行了封装，使JavaScript 第一次走出前端运行在了服务器上。这对JavaScript来说是一种质的突破，这使得 Web 编程可以只用一门语言便可完成。It's
+Amazing! Web 的大一统时代仿佛就要来了。同时 Node 也诞生了 npm，从此 JavaScript
+也有了强大的包管理机制。
+// 使用 Express 的 Hello world
+var express = require('express');
+var app = express();
+
+app.get('/', function (req, res) {
+res.send('Hello World!');
+});
+
+var server = app.listen(3000, function () {
+var host = server.address().address;
+var port = server.address().port;
+
+console.log('Example app listening at http://%s:%s', host, port);
+});
+关于 Node：Node .js-Wikipedia/我们为什么要使用 NodeJS
+Web 开发框架：Express/ThinkJS/Clouda
+博客系统：Ghost/hexo
+基于 Node 的前端自动化构建工具：Grunt/Gulp
+　　3. Hybrid App
+　　传统上 JavaScript 只能在浏览器中运行，Node 的出现让 JavaScript运行在了服务端，然而只是这样的话，好像还是少点什么。人们总是希望用一种方式去做所有的事情，于是聪明的工程师们就发明了 Hybrid App 这种形式，让 JavaScript 在一定意义上运行在了移动设备上。然而当前 Hybrid App 虽然让JavaScript 也可以写出JAVA/Objective-C 才能实现的 APP，但是这种方式仍然没有抛弃浏览器运行环境，对 WebView
+有很强的依赖性，性能和原生应用还有很大差距。
+
+对比：Native App、Web App 还是Hybrid App？
+工具：PhoneGap/APICloud/AppCan
+　　4. 桌面应用
+　　至此 JavaScript 除了可以被浏览器解析，也可以作为后端语言使用，还可以用来构建移动端
+APP。仿佛已经够强大了吧，然而这还不够，JavaScript 还可以用来构建桌面应用！
+　　Node-webkit
+　　Node-webkit 是一个 Web 应用程序运行时环境，它可以让你以 Web 的方式来写桌面应用程序，你可以用任何流行的 Web 技术来编写一个跨平台（Windows，Linux，MacOS）的桌面程序，并且性能和交互也是良好的，Teambition 桌面客户端便是使用 Node-webkit 编写的。目前在 GitHub 上有 24463 Star。
+　　heX
+　　heX 是有道公司开发的采用前端技术（HTML，CSS，JavaScript）开发桌面应用软件的跨平台解决方案，意在解决传统桌面应用开发中繁琐的 UI 和交互开发工作，使其变的简单而高效。特别适合重 UI，重交互的桌面应用软件。新版有道词典 beta 版的首页便是使用 heX 开发完成的。
+Node-Webkit作者王文睿：桌面应用的全新开发方式
+Node-Webkit文档/Node-Webkit教程
+heX 介绍/heX文档
+　　Electron
+　　Electron（以前叫做 Atom Shell） 是 GitHub 开源的使用 Web 技术开发桌面应用的技术平台。它允许你使用 HTML, CSS和JavaScript 编写跨平台的桌面应用。它是 io.js 运行时的衍生，专注于桌面应用而不是 web 服务端。Electron 不仅仅是一个支持打包web 应用成为桌面应用的原生 web view。它现在包含 app 的自动升级、安装包、崩溃报告、通知和一些其它原生桌面应用的功能——所有的这些都通过JavaScript API 调用的。
+使用 AngularJS 和
+Electron 构建桌面应用
+　　5. 神作 React
+　　React
+　　React（React.js） 是由 FaceBook 开发和维护的前端框架，目前在 GitHub 得到了 27900+
+star。它摒弃了 MVC/MVVM 的模式，仅仅是做 UI，开创性地采用了 Virtual DOM（虚拟 DOM）避免了 DOM 操作消耗性能的问题，将 UI拆分成不同的可组合、可复用、可维护的组件，组件和组件之间耦合度极低，开发效率大幅度增加。在前端 UI 组件化的趋势下，这很值得去尝试。instagram.com全站都采用React进行开发。
+
+　　上图来自 @鬼道 的知乎回答如何评价
+React Native？
+// 简单的官方示例
+var HelloMessage = React.createClass({
+render: function() {
+return <div>Hello {this.props.name}</div>;
+}
+});
+
+React.render(<HelloMessage name="John" />, mountNode);
+　　React Native
+　　React Native 既拥有 Native 的用户体验，又保留 React 的开发效率。开源不到1周 GitHub Star破万，这简直是逆天的成绩啊！上线之初仅支持 iOS，React 也在9月14号对 Android提供了支持服务，这几天意味着你可以使用同一套逻辑和架构、同一门语言实现 Web、iOS、Android的开发。由于各大平台 API和交互逻辑的不同，React Native 的理念是 “Learn once, write anywhere”，而不是曾经跨平台流行的 “Write once, run anywhere” 。实际上 React Native 和 React 有很大的差别，但是逻辑和架构还是保持一致的。React Native 和 Hybrid 最大的区别是前者摒弃了饱受性能诟病的 WebView，通过 HTML 标签和移动平台的组件进行映射，仿佛是将 JS“编译”成了原生语言一样，性能和交互体验会比 Hybrid 好上不少。目前在 GitHub 上有 18551 Star。
+// 简单的官方示例
+// iOS
+var React = require('react-native');
+var { TabBarIOS, NavigatorIOS } = React;
+var App = React.createClass({
+render: function() {
+return (
+<TabBarIOS>
+    <TabBarIOS.Item title="React Native" selected={true}>
+        <NavigatorIOS initialRoute={{ title: 'React Native' }} />
+    </TabBarIOS.Item> </TabBarIOS>
+);
+},
+});
+
+// Android
+var React = require('react-native');
+var { DrawerLayoutAndroid, ProgressBarAndroid } = React;
+var App = React.createClass({
+render: function() {
+return (
+<DrawerLayoutAndroid
+        renderNavigationView={() => <Text>React Native</Text>}>
+<ProgressBarAndroid />
+</DrawerLayoutAndroid>
+);
+},
+});
+React 文档
+React
+傻瓜教程/React 入门-阮一峰
+React Native文档
+React Native
+　　6. 游戏
+　　世界上最流行的 2D 游戏引擎之一 Cocos2d 和最流行的 3D 游戏引擎之一 Unity3D 均支持 JS 开发游戏。
+　　Cocos2d-js
+　　Cocos2d-JS 是 Cocos2d-x 的 JavaScript 版本，融合了 Cocos2d-html5 和Cocos2d-x
+JavaScript Bindings。它支持 Cocos2d-x 的所有核心特性并提供更简单易用的 JavaScript 风格
+API，并且天然支持原生、浏览器跨平台应用。﻿
+　　在3.0版中，Cocos2d-JS 完成了不同平台工作流的彻底整合，为不同平台提供了统一的开发体验。无论开发 Web应用还是原生应用，都可以便捷地采用 Cocos2d-JS 实现“一次开发，全平台运行”。采用 Cocos2d-JS 开发的同一套 JavaScript游戏代码，可以同时运行在 Mac OS X, Windows, iOS, Android等原生平台、以及所有现代浏览器上，这将使得我们的开发者轻松覆盖几乎所有发行渠道，带来前所未有的机遇。另一方面，若开发者只想开发一款 Web轻度休闲游戏，Cocos2d-JS 也专门为此类游戏定制了Lite Version，直接将Cocos2d-JS Lite Version集成到页面中即可使用。
+
+　　Unity3D
+　　Unity3D 是一个跨平台的 3D 游戏引擎，与 Cocos2d 最大的区别在于前者主要面对 2D 游戏开发者，后者主要进行大型 3D游戏的开发。
+　　Pomelo
+　　pomelo 是一个网易开发的基于 Node.js 的开源游戏服务器框架，与以往单进程的游戏框架不同，它是高性能、高可伸缩、分布式多进程的游戏服务器框架，并且使用很简单。它包括基础开发框架和一系列相关工具和库，可以帮助开发者省去游戏开发中枯燥的重复劳动和底层逻辑工作，免除开发者的重造轮子，让开发者可以更多地去关注游戏的具体逻辑，大大提高开发效率。pomelo强大的可伸缩性和灵活性使得pomelo也可以作为通用的分布式实时应用开发框架，用于一些高实时应用的开发，而且 pomelo在很多方面的表现甚至超越了现有的开源实时应用框架。pomelo 支持所有主流平台的客户端，并提供了客户端的开发库，使得客户端的开发变得很友好。
+欢迎使用pomelo
+pomelo中文文档
+pomelo架构概览
+　　Bearcat
+　　Bearcat 是网易 pomelo 项目团队开发的一个基于 POJOs(Plain Old JavaScript Objects)
+进行开发的应用层框架，Bearcat 提供了一个轻量级的容器来编写简单、可维护的 Node.js。Bearcat提供了一个基础的底层来管理应用逻辑对象，使得开发者就可以把精力放在应用层的逻辑编写上。Bearcat使开发者编写“简单纯粹的 JavaScript
+对象”(POJO)，并且不会侵入这些 POJO，你完全可以在不使用 Bearcat 的环境下部署应用这些 POJO。
+JavaScript 应用框架Bearcat
+基于bearcat 的 cocos2d-js 游戏开发
+　　7. 其它
+　　FUSE
+　　Fuse 是一个为开发者和设计者而设计的用户体验（UX）工具集，用于创建原生的、跨平台的 iOS 和 Android 移动应用。在 Fuse中，开发者使用标记定义用户界面，使用JavaScript编写应用程序逻辑，同时所有的渲染都会被编译成原生代码以获得最佳性能。通过Fuse，用户能够快速地创建漂亮的、具有流畅动画体验的原生移动应用。
+Fuse：专为移动应用开发者和设计者而生的用户体验工具集
+官方示例
+　　Cylon
+
+　　Cylon.js 是一个开源 JavaScript 框架，使用 Node.js 来进行机器人开发和物理计算。Cylon.js
+提供一个简单强大的方法来解决同一时间合并不同设备的问题。目前支持多达 43 种平台的硬件设备，其中包括 Arduino、AT&T M2X、Intel
+Edison、Leap Motion、Nest、OpenCV 等众多热门的硬件平台。
+用Javascript制造机器人和火箭
+GitHub
+超越Web，Javascript在物联网的应用
+NodeBots-JavaScript在智能设备驱动（物联网）中的崛起
+　　浏览器插件和扩展
+　　现代浏览器大都支持扩展程序的开发，我们常用的慧慧购物助手、有道翻译、浏览器截图等等这些浏览器插件都是使用 JavaScript开发完成的。浏览器会暴露一些方法给扩展程序使用，比如 js 注入、窗口管理、页面通讯等。正是这些插件的存在让浏览器的可用性大大增强。
+Chrome
+插件集
+论前端工程师如何应对西电教学评估系统
+Chrome
+插件开发文档
+　0x03. JavaScript 语言是坨屎？
+兼容性
+性能
+面向对象
+深拷贝
+单线程
+···
+　　这些都是 JavaScript 的语言缺陷，拿面向对象举例，JavaScript 没有严格意义的类和对象，只能用函数这种奇奇怪怪的方式实现OOP。这些缺陷也情有可原，因为事实上 JavaScript 在几天（据说为10天）的时间内就被 Brendan Eich 设计出来了。很多人都感叹
+JavaScript 在这么恶劣的语言和环境中竟能得到这样的成功。正是因为 JavaScript开发周期短、早期规范缺失、浏览器厂商竞争这些原因导致一些问题迟迟不能解决。
+// 工厂模式 常用
+function Person(name, gender, age) {
+var obj = Object();
+obj.name = name;
+obj.gender = gender;
+obj.age = age;
+obj.tellAge = function () {
+console.log(this.age);
+};
+return obj;
+}
+
+var puya = new Person('PuYart', 'male', '21');
+puya.tellAge();
+// 构造函数模式
+function Person(name, gender, age) {
+this.name = name;
+this.gender = gender;
+this.age = age;
+this.tellAge = function () {
+console.log(this.age);
+};
+}
+
+var puya = new Person('PuYart', 'male', '21');
+puya.tellAge();
+// 原型链（+构造函数）模式 很常用
+function Person(name, gender, age) {
+this.name = name;
+this.gender = gender;
+this.age = age;
+}
+
+Person.prototype.tellAge = function () {
+console.log(this.age);
+};
+
+var puya = new Person('PuYart', 'male', '21');
+puya.tellAge();
+　　这里举出了常用的三种构造对象的方法，你也会感觉到恶心得要死吧。为了改善 JavaScript 语言本身的不足，微软在2012年推出了 TypeScript 语言，TypeScript 是 JavaScript 的超集，支持强类型和 OOP，最终编译为 JavaScript。当然了 CoffeeScript 也是一种解决方案。
+　　ECMAScript 经过4个版本的迭代之后，终于迎来了第5个版本（因为 ES4 流产了）—— ES6。ES6 标准的发布可谓是 JavaScript 历史上最重要的里程碑，它给JavaScript带来了诸多语言特性，箭头操作符、类的支持、字符串模板、函数参数默认值、迭代器、for-of 遍历、生成器、Symbols基本类型等等，这就意味着你可以这样写 JavaScript 了：
+// ES6 中启用了关键字 class
+class Person {
+constructor(name, gender, age) {
+this.name = name;
+this.gender = gender;
+this.age = age;
+}
+tellAge() {
+console.log(this.age);
+}
+}
+
+var puya = new Person('PuYart', 'male', '21');
+puya.tellAge();
+　　虽然 ES6 带来了很多美妙的特性，让JavaScript 也可以像其他语言那样优雅地写出健壮的代码，但是 ES5还会独占市场很久，各浏览器厂商跟进也需要一段时间。然而我们有理由相信，在不久的将来，JavaScript 的另一片美好的天空定会到来。毕竟 JavaScript是一门年轻但是充满活力、不断进化的语言。
+　　JavaScript 固然可以做很多事情，从前端到后端，从桌面到移动，从应用到游戏，仿佛干了所有的事情一样。然而，也正是 JavaScript固有的语言特性，使其在很多场景并不适用，调用硬件（经 @zhangyang 提醒 nodebots可以控制硬件）、大数据、高强度计算等等这些考验性能和执行效率的事情 JavaScript 是万万做不到的不太擅长的；尽管 JavaScript可以移动开发，然而真正采用 JavaScript来开发移动端是一个很需要魄力的选择，没有生态支持、没有历史可借鉴，究竟有多少人愿意这样做也是一个问题。细细一想，JavaScript成熟的应用空间也只剩下了前端、轻量级后端和游戏了吧。然而当 ES6 大量部署的时候，这个世界会是什么样，谁又知道呢？
+JavaScript 统治世界，任重而道远啊！
+</textarea>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>
+<footer class="container" id="footer">
+    <div id="f-left">
+        <p><span class="change-3"><span class="glyphicon glyphicon-alert"></span><a href="#">&nbsp;<span class="change-3">版权声明</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">@2016</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <span class="change-2"><a href="#">粤ICP备16016173号</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span></span><a href="#">  Desiged@shudery</a><span class="change-2">&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#">Source-image@WaJun</a></span></p>
+
+    </div>
+    <div id="f-right">
+        <div class="ic"><img src="img/weixin-2.png">&nbsp;<a target="_blank" href="img/shudery.jpg" style="color: #808080">SunParker</a></div>
+    </div>
+</footer>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -9,3 +9,24 @@
     float:left;
     margin: 10px 1.5% 20px;
 }
+img{
+    margin:0 5%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);    width:90%;
+}
+@media (max-width: 990px) {
+    img{
+        height: 170px;
+    }
+}
+
+@media (max-width: 550px){
+    img{
+
+    }
+    .box{
+        width: 90%;
+
+    }
+}

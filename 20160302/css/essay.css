@@ -1,18 +1,19 @@
 #box-1{
-    height: 420px;
+    height: 620px;
     margin-bottom:30px;
     width:100%;
 }
 #content-1{
-    height: 350px;
-    overflow:scroll;
+    height: 550px;
     margin: 20px 20px 20px 0;
-    width: 60%;
+    width: 56%;
 }
+#content-1 textarea{height: 550px;width: 100%;border-style: none;}
 #box-1 img{
     width: 30%;
     height: 350px;
     margin-left:30px ;
+    margin-right: 0;
 }
 h4{
     font-size: 25px;
@@ -25,10 +26,10 @@ h4{
     #box-1{
     }
     #content-1{
-        height: 370px;
+        height: 570px;
     }
     #box{
-        height: 450px;
+        height: 550px;
     }
     #box-1 img{
         height: 180px;
