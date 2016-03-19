@@ -1,0 +1,21 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#container{
+	width:1000px;
+	margin:0 auto;
+    position: relative;
+}
+.box{
+	width:150px;
+	float: left;
+	border:1px solid grey;
+	border-radius: 10px;
+    margin:5px;
+    text
+}
+img{
+	width:140px;
+	margin: 5px;
+}
