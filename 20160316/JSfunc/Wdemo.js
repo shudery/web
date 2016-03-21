@@ -41,7 +41,7 @@ function Demo(){
             BoxHeightAll[i] = content[i].offsetHeight;
         }else{
             var minHeight = Math.min.apply(null,BoxHeightAll);
-            //找到第一排中最矮的图片的高度
+            //找到第一排中最矮的图片的高度,min比较参数，apply传入数组
             var minIndex = getminHeight(BoxHeightAll,minHeight);
             content[i].style.position = 'absolute';
             //前一排的定位不能为absolute所以不再CSS中设置
