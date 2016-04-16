@@ -1,0 +1,15 @@
+{
+  "name": "20160405",
+  "version": "1.0.0",
+  "description": "",
+  "main": "obj.js",
+  "dependencies": {
+    "bluebird": "^3.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
