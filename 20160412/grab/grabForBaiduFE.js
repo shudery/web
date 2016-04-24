@@ -30,17 +30,11 @@ for (var i = 1; i <= maxTaskNum; i++) {
 						fs.writeFile('FEtask/task_' + i + key + '.txt', data.title + data.content + allUrl);
 						console.log(i + 'Pull Succ:' + data.title);
 					}
-
-
-
-
 				}
-
 			})
 			.error(function(err) {
 				console.log(i + 'Pull Fail:' + err);
 			})
-
 	})(i)
 }
 grab.done();
