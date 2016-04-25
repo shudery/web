@@ -412,8 +412,22 @@ function fixHtml(content) {
     // 替换掉 <noindex> <nofollow> 的标签
     content = content.replace(/<\/?(noindex|nofollow)>/ig, '');
     // 替换掉 IE Hack
-    content = content.replace(/(<!--\[if[^\]]*\]>|<\!\[endif\]-->)/ig, '');
-
+    /**
+     * 判断非IE浏览器（需要注释掉流程控制的语句）
+     * @example <!--[if (gt IE 9)|!(IE)]><!--><html><!--<![endif]-->
+     */
+     content = content.replace(/(<!--\[if[^\]]*\]><!-->|<!--<\!\[endif\]-->)/ig, '');
+    /**
+     * 判断IE版本的语句
+     * @example <!--[if IE 8]><html class="ie8 ie"><![endif]-->
+     */
+     content = content.replace(/(<!--\[if[^\]]*\]>|<\!\[endif\]-->)/ig, '');
+    /**
+     * 处理IE HACK
+     */
+    //var headIndex = content.indexOf('<head');
+    //content = '<html>\n\r' + content.substr(headIndex);
+    // content = content.replace(/<head>$/, '<html></html>');
     content = fixDoctypeTag(content);
     content = fixHeadTag(content);
     content = fixBodyTag(content);
