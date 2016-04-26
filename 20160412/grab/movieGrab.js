@@ -21,30 +21,34 @@
 // * Created by IBM on 2016/3/17.*/
 //imooc爬虫
 var Grab = require('./grab/grab');
-var fs = require('fs')
+var fs = require('fs');
 var grab = new Grab();
-var stream = require('stream')
 
 var movieClassName = [];
 var domain = "https://movie.douban.com";
 var url = 'https://movie.douban.com/chart';
-grab.get(url)
-grab.set({
-		'movieClass[]': '.aside .types span a@href',
-		'movieName[]': '.aside .types span a'
+
+var movieName = '剧情片'
+var urlAll = 'https://movie.douban.com/typerank?type_name=%E5%89%A7%E6%83%85&type=11&interval_id=100:90&action='
+grab.get(urlAll)
+	.set({
+		'theHead': '.movie-name span',
+		'name': '.movie-name-text', //name + playable + rank
+		'url': '.movie-name-text a@href', //detail
+		'actor': '.movie-crew',
+		'classNa': '.movie-misc',
+		'grade': '.rating_num',
+		'comment': '.comment-num'
 	})
 	.data(function(data) {
-		var movieClass = data.movieClass;
-		var movieName = data.movieName;
-
-		for (var i = 0; i < movieClass.length; i++) {
-				fs.writeFile('movie/allClass.txt', movieName[i]+':'+movieClass[i]);
-				console.log(i + ':' + movieName[i])
-		}
-		//var all = fs.createWriteStream('movie/fileAll.txt');
-		//console.log(all);
+		var dataString = '';
+		// for (var n = 0; n < data.head.length; n++) {
+		// 	dataString = dataString + data.name[n] + '\n' + data.url[n] + '\n' + data.actor[n] + '\n' +
+		// 		data.classNa[n] + '\n' + data.grade[n] + '\n' + data.comment + '\n\n';
+		// }
+		console.log(data.grade)
 	})
 	.error(function(err) {
-		console.log('Pull Fail:' + err);
+		console.log('Fail:' + err)
 	})
 	.done()
