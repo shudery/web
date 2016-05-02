@@ -233,7 +233,7 @@ function doReq(context, options, resolve, reject) {
             contentType = headers['content-type'];
 
         // 将请求地址放到上下文中
-        context.url = options.url || options.uri;
+        context.url = options.url || options.uri
         // 将每次的请求返回放入到上下文中
         context.responses = responses;
         // 将请求返回放到上下文中
@@ -414,7 +414,7 @@ function fixHtml(content) {
     // 替换掉 IE Hack
     content = content.replace(/(<!--\[if[^\]]*\]>|<\!\[endif\]-->)/ig, '');
 
-    content = fixDoctypeTag(content);
+    content = fixDoctypeTag(content);   
     content = fixHeadTag(content);
     content = fixBodyTag(content);
     content = fixHtmlTag(content);
