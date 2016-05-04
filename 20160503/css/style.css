@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+	background: url(../img/1.jpg) no-repeat;
+	background-size:100%;
+}
+
+#header-nav{
+	display: none;
+}
+
+#test{
+}
