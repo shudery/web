@@ -1,22 +1,23 @@
 $(document).ready(function() {
-	var count = 0;
 	$('*').on('mousemove', function() {
-		if (!count) {
-			count = 1;
-			var i = setTimeout(function() {
-				$('#header-nav').fadeIn('slow');
-				count = 0;
-			}, 200)
+
+		$('#header-nav').fadeIn('slow');
+
+	});
+	
+
+
+	//立刻执行一次获取时间
+	(function mygetTime() {
+		var time = new Date().toString().match(/.{8}\sGMT/)[0].split(' GMT')[0];
+		if (+time.split(':')[0] > 11) {
+			var halfDay = "Good afternoon";
+		} else {
+			var halfDay = "Good morning";
 		}
-	})
-	var key = 0
-	$('*').on('mousemove', function() {
-		if (!key) {
-			key =1;
-			var i = setTimeout(function() {
-				$('#header-nav').fadeOut('slow');
-				key =0;
-			}, 1500);
-		}
-	})
+		$('.time').text(time);
+		$('.word').text(halfDay);
+		setInterval(mygetTime, 490)
+	})()
+	
 })

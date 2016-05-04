@@ -4,8 +4,14 @@
 }
 
 body{
-	background: url(../img/1.jpg) no-repeat;
-	background-size:100%;
+	
+
+}
+.navbar-default{
+	background-color: rgba(0,0,0,0.1);
+	border: 0px;
+	color: black;
+	font-size: 15px;
 }
 
 #header-nav{
@@ -13,4 +19,36 @@ body{
 }
 
 #test{
+}
+
+#box{
+	height: 400px;
+	background: url(../img/03033.jpg) no-repeat;
+	background-size: 100%;
+}
+#center{
+	position: fixed;
+	top:20%;
+	text-align: center;
+	left:32%;
+	line-height: 80px;
+}
+
+.time{
+	font-size: 100px;
+	color: #fff;
+}
+
+.word{
+	font-size: 70px;
+	color:#fff;
+}
+
+footer{
+	position:absolute;
+	bottom: 0;
+	height: 50px;
+	width:100%;
+	background: url(../img/03033.jpg);
+	text-align: center;
 }
