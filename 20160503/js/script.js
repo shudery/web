@@ -8,17 +8,17 @@ $(document).ready(function() {
 
 
 	//立刻执行一次获取时间
-	(function mygetTime() {
-		var time = new Date().toString().match(/.{8}\sGMT/)[0].split(' GMT')[0];
-		if (+time.split(':')[0] > 11) {
-			var halfDay = "Good afternoon!";
-		} else {
-			var halfDay = "Good morning!";
-		}
-		$('.time').text(time);
-		$('.word').text(halfDay);
-		setInterval(mygetTime, 490)
-	})()
+	// (function mygetTime() {
+	// 	var time = new Date().toString().match(/.{8}\sGMT/)[0].split(' GMT')[0];
+	// 	if (+time.split(':')[0] > 11) {
+	// 		var halfDay = "Good afternoon!";
+	// 	} else {
+	// 		var halfDay = "Good morning!";
+	// 	}
+	// 	$('.time').text(time);
+	// 	$('.word').text(halfDay);
+	// 	setInterval(mygetTime, 490)
+	// })()
 
 	// var ypos = 0
 	// var oldPos = +$('#box2').css('background-position').split('px ')[1].split('px')[0];
@@ -49,6 +49,7 @@ $(document).ready(function() {
 		$('#button').fadeOut(2000);
 		$('#center').fadeOut(3000);
 		$('#content').fadeIn(4000);
+		$('#color').fadeIn(500);
 		mygetTime=null;
 		
 	})
