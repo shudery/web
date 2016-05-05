@@ -5,20 +5,19 @@ $(document).ready(function() {
 	// 	$('footer').fadeIn(2000)
 	// });
 
-
-
 	//立刻执行一次获取时间
-	// (function mygetTime() {
-	// 	var time = new Date().toString().match(/.{8}\sGMT/)[0].split(' GMT')[0];
-	// 	if (+time.split(':')[0] > 11) {
-	// 		var halfDay = "Good afternoon!";
-	// 	} else {
-	// 		var halfDay = "Good morning!";
-	// 	}
-	// 	$('.time').text(time);
-	// 	$('.word').text(halfDay);
-	// 	setInterval(mygetTime, 490)
-	// })()
+
+	(function mygetTime() {
+		var time = new Date().toString().match(/.{8}\sGMT/)[0].split(' GMT')[0];
+		if (+time.split(':')[0] > 11) {
+			var halfDay = "Good afternoon!";
+		} else {
+			var halfDay = "Good morning!";
+		}
+		$('.time').text(time);
+		$('.word').text(halfDay);
+		//setInterval(mygetTime, 490)
+	})()
 
 	// var ypos = 0
 	// var oldPos = +$('#box2').css('background-position').split('px ')[1].split('px')[0];
@@ -43,15 +42,17 @@ $(document).ready(function() {
 	// }
 	// var i = setInterval(anima1, 100)
 
-	$('#button').on('click',function(){
+	$('#button').on('click', function() {
 		// $('#box1').fadeOut(2000);
 		// $('#box2').fadeOut(2000);
-		$('#button').fadeOut(2000);
+		$('#button').fadeOut(1000);
 		$('#center').fadeOut(3000);
-		$('#content').fadeIn(4000);
-		$('#color').fadeIn(500);
-		mygetTime=null;
-		
+		$('#content').fadeIn(2000);
+		$('#color').fadeIn(1000);
+		setTimeout(function() {
+			$('#color').src='';
+		}, 3000)
+		mygetTime = null;
 	})
 
 })

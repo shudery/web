@@ -77,15 +77,57 @@
     </div>
     <!-- <div id="box2" class='box'>
     </div> -->
-    <div id='button'>
-        <button class='btn btn-default'>
+    <div>
+        <button id='button'>
             Frigting!
         </button>
     </div>
    
         <div id="content">
-            <div id="content1"></div>
-            <div id="content2"></div>
+            <div id="content1">
+                <section>
+                    JavaScript的设计模式
+                </section>
+                <textarea>
+多态的思想实际上是把“做什么”和“谁去做”分离开来，要实现这一点，
+归根结底先要消除类型之间的耦合关系。
+JavaScript 对象的多态性是与生俱来的。
+这种与生俱来的多态性并不难解释。JavaScript 作为一门动态类型语言，
+它在编译时没有类型检查的过程，既没有检查创建的对象类型，
+又没有检查传递的参数类型,多态的最根本好处在于，
+你不必再向对象询问“你是什么类型”而后根据得到的答
+案调用对象的某个行为——你只管调用该行为就是了，其他的一切多态机制都会为你安排妥当。
+（将对象本身和对象的行为分离）
+
+有时候我们使用call 或者apply 的目的不在于指定this 指向，
+而是另有用途，比如借用其他对象的方法。
+那么我们可以传入null 来代替某个具体的对象：
+Math.max.apply( null, [ 1, 2, 5, 3, 4 ] ) // 输出：5
+可以直接传入数组，max的参数问题就解决了。
+
+                </textarea>
+            </div>
+            <div id="content2">
+                <section>
+                    为什么处理异常之后要重启程序？
+                </section>
+                <textarea>
+在NodeJS官方文档里都强烈建议处理完异常后立即重启程序，而不是让程序继续运行。
+按照官方文档的说法，发生异常后的程序处于一个不确定的运行状态，
+如果不立即退出的话，程序可能会发生严重内存泄漏，也可能表现得很奇怪。
+
+但这里需要澄清一些事实。JS本身的throw..try..catch异常处理机制并不会导致内存泄漏，
+也不会让程序的执行结果出乎意料，但NodeJS并不是存粹的JS。
+NodeJS里大量的API内部是用C/C++实现的，因此NodeJS程序的运行过程中，
+代码执行路径穿梭于JS引擎内部和外部，而JS的异常抛出机制可能会打断正常的代码执行流程，
+导致C/C++部分的代码表现异常，进而导致内存泄漏等问题。
+
+因此，使用uncaughtException或domain捕获异常，代码执行路径里涉及到了C/C++部分的代码时，
+如果不能确定是否会导致内存泄漏等问题，最好在处理完异常后重启程序比较妥当。
+而使用try语句捕获异常时一般捕获到的都是JS本身的异常，不用担心上诉问题。
+
+                </textarea>
+            </div>
 
         </div>
             <iframe id='color' src="http://colorhunt.co/tab.php"></iframe>
