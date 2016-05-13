@@ -26,7 +26,7 @@ body{
 #test{
 }
 .box{
-	background: url(../img/03033.jpg) no-repeat;
+	background: url(https://photo.tuchong.com/376715/f/7260186.webp) no-repeat;
 	height: 643px;
 	background-attachment:fixed;
 	background-size: 100%;
@@ -40,11 +40,12 @@ body{
 
 #center{
 	position: fixed;
-	top:20%;
+	top:55%;
 	left:30%;
 	text-align: center;
 	line-height: 80px;
-	text-shadow:10px 15px 5px;
+	text-shadow:10px 15px 5px #000;
+	cursor:pointer;
 }
 .time{
 	font-size: 100px;
@@ -56,10 +57,10 @@ body{
 }
 #button{
 	position: absolute;
-	left: 45%;
-	top:350px;
+	left:45%;
+	top:500px;
 	z-index: 999;
-	width:15%;
+	width:10%;
 	font-size: 30px;
 	text-align: center;
 	text-shadow:3px 6px 5px;
@@ -81,14 +82,17 @@ body{
 	border-style: none;
 	height: 200px;
 	margin: 25px 0;
+	line-height: 22px;
 }
 #content section{
 	width:20%;
 	height: 250px;
 	margin: 10%;
 	float: left;
+	font-size: 25px;
 }
 #content{
+	font-weight: bolder;
 	display: none;
 	position:absolute;
 	top:50px;

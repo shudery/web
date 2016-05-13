@@ -42,7 +42,7 @@ $(document).ready(function() {
 	// }
 	// var i = setInterval(anima1, 100)
 
-	$('#button').on('click', function() {
+	$('.box').on('click', function() {
 		// $('#box1').fadeOut(2000);
 		// $('#box2').fadeOut(2000);
 		$('#button').fadeOut(1000);
