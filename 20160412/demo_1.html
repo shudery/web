@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>demo_1</title>
+</head>
+<body>
+	<label><input type="button" style="width:500px;height:500px"><p>hello</p></label>
+</body>
+<script type="text/javascript">
+	var a = document.getElementsByTagName('label')[0]
+	a.onclick = function(e){
+		console.log('test')
+		//e.preventDefault()
+	}
+	//这里按下按钮Button则显示一次TEST，而如果按下的是span则会显示两次test
+	var b = document.getElementsByTagName('p')[0]
+	b.onclick = function(e){
+		console.log('p')
+		//e.stopPropagation()
+	}
+	
+	// var c = document.getElementsByTagName('input')[0]
+	// c.onclick = function(e){
+	// 	console.log('input')
+		//e.preventDefault()
+	//}
+</script>
+</html>
