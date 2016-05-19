@@ -1,0 +1,301 @@
+
+body{
+background-image: url("../img/03034.jpg");
+background-attachment: fixed;
+    /*使背景图不会随着滚动条移动而移动*/
+}
+
+.touMing{
+    background: rgba(255,255,255,0.1);
+}
+#warp{
+    border: 2px solid #c0c0c0;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px;
+    margin-top: 3px;
+    background-color: #ffffff;
+}
+#liuTu{
+    background-color: #ffffff;
+}
+#box-1{background-color: #ffffff}
+#box-2{background-color: #adb5b0
+}
+#box-3{background-color: #181818;
+    color: #e5e5e5;
+}
+.navbar-default{
+    background-color: #ffffff;
+    border-bottom: 2px solid #dcdcdc;
+    margin-bottom: 10px;
+}
+
+#liuTu{
+    border: 1px solid #c0c0c0;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px;
+}
+.carousel {
+    height: 500px;
+    margin:0 auto;
+}
+
+.carousel .item {
+    height: 500px;
+    background-color: #000000;
+}
+
+.carousel .item img {
+    width: 100%;
+}
+
+.carousel-caption {
+    z-index: 10;
+}
+#liuTu h2{
+    text-shadow: 0 1px 3px;
+}
+
+.carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1.8;
+}
+.carousel-caption h2:hover{
+    cursor: pointer;
+
+    color:red;
+}
+#box{
+    height:330px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+#box h4{
+
+}
+#img-1{background-image: url(../img/ren.jpg)}
+#img-2{background-image: url(../img/Socool.jpg)}
+#img-3{background-image: url(../img/Stress.jpg)}
+#box-1 img{height: 210px;width: 50%;margin: 25px 5% 10px 5%}
+#box-2 img{height: 150px;width: 80%;margin:10px 10%}
+#box-3 img{height: 150px;width: 80%;margin:10px 10%}
+#content-1{
+    height: 260px;width:40%;
+    float: right;overflow:hidden;
+}
+#content-2{
+    overflow:hidden;
+    margin: -15px 10px 10px 30px;height:100px ;
+}
+#content-3{
+    overflow:hidden;
+    margin: -15px 10px 10px 30px;height:100px ;
+}
+.box-style{
+    height:270px;
+    width:30%;
+    float:left;
+    border: 1px solid #c0c0c0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+.content{
+    float: right;
+}
+#footer{
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 40px;
+    border: 2px solid #c0c0c0;
+    border-radius: 10px;
+    box-shadow: 0px -5px 10px;
+    width: 85%;
+    overflow: hidden;
+    padding-top: 15px;
+    background-color: #ffffff;
+}
+#f-left{
+    margin-left: 80px;
+    float:left;
+}
+#f-right{
+    float:right;
+
+}
+.ic{
+    float: right;
+}
+.ic img{
+    width:25px;
+    height: 25px;
+}
+
+@media (max-width: 990px) {
+    #nav1{
+        height: 20px;
+    }
+    .carousel {
+        height: 350px;
+        margin:0 auto;
+    }
+
+    .carousel .item {
+        height: 350px;
+        background-color: #000;
+    }
+
+    .carousel .item img {
+        width: 100%;
+    }
+    .carousel-caption p {
+        margin-bottom: 15px;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    .item h2{
+        font-size: 22px;
+    }
+    .box-style{
+        width:100%;
+        clear: both;
+        height:300px;
+        margin-top: 20px;
+
+    }
+    #box{
+        height:980px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    #box h2{
+        color: #8e8eff;
+        font-weight: bold;
+    }
+    #footer{
+        font-size: 10px;
+    }
+    #f-left{
+        margin-left: 0px;
+    }
+    #f-right{
+
+    }
+    .change-2{display:none;}
+
+    .ic img{
+        width:20px;
+        height: 20px;
+    }
+    #img-1{background-image: url(../img/ren.jpg)}
+    #img-2{background-image: url(../img/Socool.jpg)}
+    #img-3{background-image: url(../img/Stress.jpg)}
+    #box-1 img{height: 230px;width: 40%;margin: 30px 0px 30px 5%}
+    #box-2 img{height: 230px;width: 40%;margin: 30px 5% 30px 1%;float: right}
+    #box-3 img{height: 230px;width: 40%;margin: 30px 0px 30px 5%}
+    #content-1{
+        height:230px;width:46%;
+        float: right;
+        margin: 3%;
+    }
+    #content-2{
+        height:230px;width:46%;
+        margin: 3%;
+    }
+    #content-3{
+        height:230px;width:46%;
+        float: right;
+        margin: 3%;
+    }
+}
+
+@media (max-width: 550px) {
+    body{
+    }
+    #warp{
+        width: 95%;
+    }
+    #nav1{
+        height: 10px;
+    }
+    .box-style{
+        width:100%;
+        clear: both;
+        height:200px;
+        margin-top: 10px;
+    }
+    #box{
+        height:650px;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+
+    #box h4{
+        font-size: 15px;
+    }
+    #liuTu h2{
+        font-size: 12px;
+    }
+
+    .carousel {
+        height: 180px;
+        margin:0 auto;
+    }
+
+    .carousel .item {
+        height: 180px;
+        background-color: #000;
+    }
+
+    .carousel .item img {
+        width: 100%;
+    }
+    .carousel-caption p {
+        display: none;
+        margin-bottom: 10px;
+        font-size: 10px;
+        line-height: 1.2;
+    }
+    #box-1 img{height: 120px;width: 40%;margin: 10% 2%;}
+    #box-2 img{height: 140px;width: 40%;margin: 10% 2%;}
+    #box-3 img{height: 140px;width: 40%;margin: 10% 2%;}
+    #content-1{
+        height:180px;
+        float: right;
+    }
+    #content-2{
+        height:180px;
+    }
+    #content-3{
+        height:180px;
+        float: right;
+    }
+
+    #footer{
+        height: 30px;
+        margin: 0 auto;
+        margin-top: 20px;
+        border: 1px solid #c0c0c0;
+        border-radius: 5px;
+        box-shadow: 0px -3px 3px;
+        width: 90%;
+        overflow: hidden;
+        padding-top: 5px;
+    }
+    #footer{
+        font-size: 10px;
+        color:#808080;
+    }
+    .change-3{display:none;}
+
+    .ic img{
+        width:15px;
+        height:15px;
+    }
+    .change{
+        display:none;
+    }
+}
