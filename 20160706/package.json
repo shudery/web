@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "mocha-phantomjs": "^4.1.0",
     "should": "^9.0.2"
   }
 }

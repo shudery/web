@@ -1,0 +1,19 @@
+{
+  "name": "lesson8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+   "devDependencies": {
+    "mocha": "^1.21.4",
+    "should": "^4.0.4",
+    "supertest": "^0.14.0"
+  },
+  "dependencies": {
+    "express": "^4.9.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
